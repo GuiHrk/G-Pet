@@ -4,35 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="robots" content="index">
+    <meta property="og:title" content="GPET">
+    <meta name="keywords" content="Artigos Pet , pets , cães , gatos ">
+    <meta property="og:locale" content="pt_BR">
+
     <title>GPet</title>
-</head>
-<body>
-    <Header>   
-        <nav class="navbar"> 
-            <div class="logo-home"> <a href=""><img src="imgs/Logo .png" alt=""> </a></div>
-           
-           <div class="search-box">
-                <img src="" alt=""> 
-           
-            <form> 
-                <input type="text" placeholder="Pesquisar....."> 
-
-            </form>
-        </div>
-           
-        <div class="nav-itens"> 
-             <a href=""> <img src="imgs/perfil.png" alt="Login"> </a>
-             <a href=""> <img src="imgs/carrinho.png" alt="Carrinho"> </a> 
-             <a href=""> <img src="imgs/favorito.png" alt="Favoritos"> </a> 
-             <a href=""> <img src="imgs/contato.png" alt="Contatos"> </a>  
-        </div>
-        </nav>
-
-    </Header>
-
-
-
-
-</body>
-</html>
+  </head>
+  <body>
+      <header>
+          <nav class="navbar">
+              <div class="logo-home">
+                  <a href="#"><img src="imgs/Logo .png" alt="Logo"></a>
+              </div>
+              <div class="search-box">
+                  <form>
+                      <input type="text" placeholder="Pesquisar.....">
+                  </form>
+              </div>
+              <div class="nav-itens">
+                  <a href=""><img src="imgs/perfil.png" alt="Login"></a>
+                  <a href=""><img src="imgs/carrinho.png" alt="Carrinho"></a>
+                  <a href=""><img src="imgs/favorito.png" alt="Favoritos"></a>
+                  <a href=""><img src="imgs/contato.png" alt="Contatos"></a>
+              </div>
+          </nav>
+      </header>
+  
+      <main>
+          <section class="categories">
+              <h2>Qual o seu pet ? </h2>
+              <ul>
+                  <li><a href="#">Gato</a></li>
+                  <li><a href="#">Pássaro</a></li>
+                  <li><a href="#">Peixe</a></li>
+                <li><a href="#">Cachorro</a></li>
+              </ul>
+          </section>
+  
+          <section class="products">
+              <h2>Produtos</h2>
+              <div class="product-grid">
+                  <!-- Exemplo de produto -->
+                  <div class="product">
+                      <img src="imgs/produto1.jpg" alt="Produto 1">
+                      <h3>Ração tal </h3>
+                      <p>R$ 10,00</p>
+                      <button onclick="addToCart(1)">Comprar</button>
+                  </div>
+                  <!-- Adicione mais produtos aqui -->
+              </div>
+          </section>
+  
+          <section class="cart">
+              <h2>Carrinho</h2>
+              <div id="cart-items"></div>
+              <p>Total: R$ <span id="cart-total">0,00</span></p>
+              <button onclick="checkout()">Finalizar Compra</button>
+          </section>
+  
+          <section class="login-modal hidden">
+              <h2>Login</h2>
+              <input type="email" id="login-email" placeholder="Email">
+              <input type="password" id="login-password" placeholder="Senha">
+              <button onclick="login()">Entrar</button>
+              <button onclick="showRegister()">Cadastrar</button>
+          </section>
+  
+          <section class="register-modal hidden">
+              <h2>Cadastro</h2>
+              <input type="text" id="register-name" placeholder="Nome">
+              <input type="email" id="register-email" placeholder="Email">
+              <input type="password" id="register-password" placeholder="Senha">
+              <button onclick="register()">Cadastrar</button>
+          </section>
+      </main>
+  
+      <script src="script.js"></script>
+  </body>
+  </html>
+  
+  
+  
