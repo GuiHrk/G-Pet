@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/Gpet-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/Gpet-16x16.png">
+    
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="mobile-web-app-capable" content="yes">
@@ -14,6 +18,7 @@
     <meta property="og:title" content="GPET">
     <meta name="keywords" content="Artigos Pet , pets , cães , gatos ">
     <meta property="og:locale" content="pt_BR">
+
 
     <title>GPet</title>
   </head>
@@ -37,28 +42,82 @@
           </nav>
       </header>
   
+
+
+<!-- alterrações a partir dessa parte: realizar mudanças para que o display se mantenha sem conflitos, com o background-img para as fotos de categoria ao fundo               -->
       <main>
           <section class="categories">
               <h2>Qual o seu pet ? </h2>
-              <ul>
-                  <li><a href="#">Gato</a></li>
-                  <li><a href="#">Pássaro</a></li>
-                  <li><a href="#">Peixe</a></li>
-                <li><a href="#"> Cachorro</a></li>
-              </ul>
+              <div class="category-grid"> 
+                
+                <a href="#" class="category-item" style="background-image: url(imgs/gato.png);"> 
+                    <div class="category-overlay">
+                        <span> Gato </span>
+                    </div>
+              
+                </a>
+
+              
+                <a href="#" class="category-item" style="background-image: url(imgs/cachorrinho.png);"> 
+                    <div class="category-overlay">
+                        <span> Cachorro </span>
+                    </div>
+                
+                </a>
+
+                 
+                <a href="#" class="category-item" style="background-image: url(imgs/Passarinho.png);"> 
+                    <div class="category-overlay">
+                        <span> Passarinho </span>
+                </div>
+                </a>
+                 
+               
+                <a href="#" class="category-item" style="background-image: url(imgs/Peixe.png);"> 
+                    <div class="category-overlay">
+                        <span> Peixe </span>
+                    </div>
+            
+                </a>
+
+             
+              </div>
           </section>
   
+<!--     -->
+
+
+
+
+
+
           <section class="products">
               <h2>Produtos</h2>
               <div class="product-grid">
         
-                  <div class="product">
-                      <img src="" alt="Produto 1">
-                      <h3>Ração tal </h3>
-                      <p>R$ 10,00</p>
-                      <button onclick="addToCart(1)">Comprar</button>
-              
-              </div>
+                 <div class="product-card">
+            <h3>Ração Premium para Gatos</h3>
+            <p class="descricao">Ração rica em proteínas</p>
+            <p class="preco">R$ 10,00</p>
+            <button class="buy-btn">Comprar</button>
+        </div>
+
+                    <div class="product-card">
+            <h3>Ração Premium para Cachorros</h3>
+            <p class="descricao">Ração rica em proteínas</p>
+            <p class="preco">R$ 20,00</p>
+            <button class="buy-btn">Comprar</button>
+        </div>
+                     
+                   
+                  <div class="product-card">
+            <h3>Ração Premium para Peixes</h3>
+            <p class="descricao">Ração rica em proteínas</p>
+            <p class="preco">R$ 30,00</p>
+            <button class="buy-btn">Comprar</button>
+        </div>
+
+             
           </section>
   
           <section class="cart">
