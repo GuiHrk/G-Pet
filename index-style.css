@@ -349,3 +349,19 @@ overflow: hidden;
         grid-template-columns: 1fr;
     }
 }
+
+
+.footer{
+    width: 100%;
+    height: 40%;
+    position: static;
+    color: #333;
+    background-color: #2a8d5f;
+    text-align: center;
+    cursor: pointer;
+}
+
+.footer a { 
+    text-decoration: none;
+    color: #ddd;
+}
