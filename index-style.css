@@ -46,7 +46,7 @@ header {
 
 .nav-itens {
     display: flex;
-    gap: 15px;
+    gap: 45px;
 }
 
 .nav-itens img {
@@ -350,7 +350,6 @@ overflow: hidden;
     }
 }
 
-
 .footer{
     width: 100%;
     height: 40%;
@@ -364,4 +363,53 @@ overflow: hidden;
 .footer a { 
     text-decoration: none;
     color: #ddd;
+}
+
+.icon-container { 
+    position: relative;
+    display: inline-block;
+}
+.hover-menu{
+    position: absolute;
+    top:  calc(100% + 10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 3000;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    width: 200px;
+    border-radius: 5px 2px 3px;
+}
+.icon-container:hover > .hover-menu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+}
+.nav-itens > .icon-container {
+    isolation: isolate;
+}
+.hover-menu.left{
+    left: 0;
+    right: auto;
+}
+.hover-menu.right{
+    right: 0;
+    left: auto;
+}
+
+.hover-menu::before{
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    border-width: 8px;
+    border-style: solid;
+}
+.hover-menu.left::before{
+    left: 15px;
+    border-color: transparent transparent white transparent;
+}
+.hover-menu.right::before {
+    right: 15px;
+    border-color: transparent transparent white transparent;
 }

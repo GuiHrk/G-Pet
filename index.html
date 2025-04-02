@@ -33,12 +33,47 @@
                       <input type="text" placeholder="O que você procura ? ">
                   </form>
               </div>   
+              
               <div class="nav-itens">
-                  <a href=""><img src="imgs/perfil.png" alt="Login"></a>
+
+                 <div class="icon-container"> 
+                <a href=""><img src="imgs/perfil.png" alt="Login"></a>
+                 <div class="hover-menu right"> 
+                        <h3> Já possui cadastro ?   </h3>
+                        <li><a href="">  Entrar </a></li>
+                        <li><a href=""> Criar Conta</a></li>
+                 </div>
+             </div>
+    
+             <div class="icon-container"> 
                   <a href=""><img src="imgs/carrinho.png" alt="Carrinho"></a>
+                    <div class="hover-menu left">
+                        <h3> Acompanhar carrinho : <a href="#X"> Aqui !</a>   </h3>
+                        
+                    </div>
+                </div>
+
+                <div class="icon-container">
                   <a href=""><img src="imgs/favorito.png" alt="Favoritos"></a>
+                    <div class="hover-menu right"> 
+                         <h3> Itens Favoritos </h3>
+
+                    </div>
+                </div> 
+
+              <div class="icon-container"> 
                   <a href=""><img src="imgs/contato.png" alt="Contatos"></a>
-              </div>
+                    <div class="hover-menu left">
+                    <h3>  Contato  </h3>
+                    
+                    <li> <a href=""> Localização !  </a></li>
+                    <li><a href=""> Contatos !</a></li>
+                    <li> <a href=""> Quem Somos Nós ? </a>  </li>
+                    
+                    </div>
+                </div>
+            </div>
+
           </nav>
       </header>
   
@@ -153,7 +188,7 @@
              
           </section>
   
-          <section class="cart">
+          <section class="cart" id="X">
               <h2>Carrinho Total: </h2>
               <div id="cart-items"></div>
               <p>Total: R$ <span id="cart-total">0,00</span></p>
