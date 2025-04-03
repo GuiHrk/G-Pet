@@ -135,14 +135,14 @@ main {
 }
 
 .preco {
-    color: #28a745;
+    color: #054113;
     font-size: 1.4em;
     font-weight: bold;
     margin: 15px 0;
 }
 
 .buy-btn {
-    background: #007bff;
+    background: #004000;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -153,7 +153,7 @@ main {
 }
 
 .buy-btn:hover {
-    background: #0056b3;
+    background: #004000;
 }
 
 /* Responsividade */
@@ -175,7 +175,7 @@ main {
 }
 
 .product button {
-    background-color: #28a745;
+    background-color: #004000;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -185,7 +185,7 @@ main {
 }
 
 .product button:hover {
-    background-color: #218838;
+    background-color: #004000;
 }
 
 .cart {
@@ -208,7 +208,7 @@ main {
 }
 
 .cart button {
-    background-color: #007bff;
+    background-color: #004000;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -218,7 +218,7 @@ main {
 }
 
 .cart button:hover {
-    background-color: #0056b3;
+    background-color: #004000;
 }
 
 .login-modal, .register-modal {
@@ -253,7 +253,7 @@ main {
 .login-modal button, .register-modal button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #004000;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -262,7 +262,7 @@ main {
 }
 
 .login-modal button:hover, .register-modal button:hover {
-    background-color: #0056b3;
+    background-color: #004000;
 }
 
 .hidden {
@@ -355,7 +355,7 @@ overflow: hidden;
     height: 40%;
     position: static;
     color: #333;
-    background-color: #2a8d5f;
+    background-color: #004000;
     text-align: center;
     cursor: pointer;
 }

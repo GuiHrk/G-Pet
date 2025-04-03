@@ -1,0 +1,126 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: white;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+        background: #ffffff; /* Branco */
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #e0e0e0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+.header img {
+    width: 80px;
+    margin-left: 15px;
+}
+
+.search-box {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento padrão entre os ícones */
+    margin-right: 25px;
+}
+ 
+.icons img:first-child {
+    margin-right: -35px; 
+}
+
+.icons img {
+    max-height: 35px;  
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.3); 
+}
+
+
+.background-stripes {
+    background: repeating-linear-gradient(180deg, white, white 100px, #004000 100px, #004000 140px);
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+
+.outer-box {
+    background: #fdfaf2;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.login-box {
+    background: #e0e0e0;
+    padding: 50px;
+    border-radius: 10px;
+    width: 450px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-box img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+
+.login-box button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #004000;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #002d00;
+}
