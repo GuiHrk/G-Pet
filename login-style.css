@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-        background: #ffffff; /* Branco */
+        background: #ffffff;
         padding: 15px;
         display: flex;
         justify-content: space-between;
@@ -45,7 +45,7 @@ body {
 .icons {
     display: flex;
     align-items: center;
-    gap: 15px; /* Espaçamento padrão entre os ícones */
+    gap: 15px; 
     margin-right: 25px;
 }
  

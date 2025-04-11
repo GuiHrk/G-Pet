@@ -11,7 +11,6 @@ body {
     line-height: 1.6;
 }
 
-
 header {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -59,11 +58,49 @@ header {
     transform: scale(1.6);
 }
 
+@media ( max-width: 768px) {
+    .navbar{
+        gap:15px;
+        padding:10px;
+    }
+.logo-home img { 
+    max-height:80px ;
+}
+.nav-itens{
+    gap:20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.nav-itens img {
+    max-height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-itens {
+        gap: 15px;
+    }
+
+    .logo-home img {
+        max-height: 60px;
+    }
+}
+
+@media(max-height:480px){
+    body{
+        font-size: 14px;
+    }
+    .categories, .products, .cart {
+        padding: 15px;
+    }
+}
+
 
 main {
     max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+    margin: 15px auto;
+    padding: 0 15px;
 }
 
 .categories, .products, .cart {
@@ -100,11 +137,29 @@ main {
     background-color: #f0f0f0;
 }
 
+@media (max-width:480px){
+    .categories ul li a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+.category-grid{
+    gap: 10px;
+    padding: 10px;
+}
+.category-item{
+    height:150px;
+}
+.category-overlay span {
+    font-size: 1em;
+}
+
+}
+    
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 25px;
-    padding: 20px;
+    gap: 15px;
+    padding: 10px;
 }
 
 
@@ -155,12 +210,18 @@ main {
 .buy-btn:hover {
     background: #004000;
 }
-
-/* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .product-grid {
         grid-template-columns: 1fr;
+
     }
+.product-card{
+    padding:10px;
+}
+.preco{
+    font-size: 1.2em;
+}
+   
 }
 
 .product h3 {
@@ -188,9 +249,11 @@ main {
     background-color: #004000;
 }
 
+
 .cart {
     position: sticky;
-    top: 20px;
+    top: 10px;
+    padding: 15px;
 }
 
 #cart-items {
@@ -219,6 +282,13 @@ main {
 
 .cart button:hover {
     background-color: #004000;
+}
+
+@media( max-width:768px){
+    .cart{
+        position: static;
+        margin-top:20px;
+    }
 }
 
 .login-modal, .register-modal {
@@ -352,13 +422,26 @@ overflow: hidden;
 
 .footer{
     width: 100%;
-    height: 40%;
+    height: auto;
     position: static;
     color: #333;
     background-color: #004000;
     text-align: center;
     cursor: pointer;
+    padding: 30px 20px;
 }
+
+@media(max-height:480px){
+    .footer {
+        padding: 20px 15px;
+    }
+.footer a {
+display: block;
+margin: 10px 0;
+}
+
+}
+
 
 .footer a { 
     text-decoration: none;

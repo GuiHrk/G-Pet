@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tela-brinquedo-style.css">
+    <title>Gpet - Brinquedos</title>
+</head>
+<body>
+    <header>
+        <header class="header">
+            <a href="index.html"><img src="imgs/Logo .png" alt="Logo"></a>
+
+            <div class="search-box">
+                <form>
+                    <input type="text" placeholder="O que você procura ?">
+                </form>
+            </div>
+
+            <div class="icons">
+                <img src="imgs/perfil.png" alt="Usuário">
+                <img src="imgs/carrinho.png" alt="carrinho">
+                <img src="imgs/favorito.png" alt="Favoritos">
+                <img src="imgs/contato.png" alt="Contatos">
+            </div>
+        </header>
+    </header>
+
+    <main>
+        <div class="brinquedos" id="listaBrinquedos">
+
+            <div class="brinquedo">
+                <img src="" alt="Bolinha com Pena">
+                <h3>Bolinha com Pena</h3>
+                <div class="preco">R$ 4,00</div>
+                <button onclick="adicionarAoCarrinho('Bolinha com Pena', 4.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Bolinha com Cravos">
+                <h3>Bolinha com Cravos</h3>
+                <div class="preco">R$ 6,00</div>
+                <button onclick="adicionarAoCarrinho('Bolinha com Cravos', 6.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Ratinho">
+                <h3>Ratinho</h3>
+                <div class="preco">R$ 4,00</div>
+                <button onclick="adicionarAoCarrinho('Ratinho', 4.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Bolinha de Gato com Barulho">
+                <h3>Bolinha de Gato com Barulho</h3>
+                <div class="preco">R$ 3,00</div>
+                <button onclick="adicionarAoCarrinho('Bolinha de Gato com Barulho', 3.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Cupcake de Borracha">
+                <h3>Cupcake de Borracha</h3>
+                <div class="preco">R$ 8,00</div>
+                <button onclick="adicionarAoCarrinho('Cupcake de Borracha', 8.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Halteres de Pelúcia">
+                <h3>Halteres de Pelúcia</h3>
+                <div class="preco">R$ 8,50</div>
+                <button onclick="adicionarAoCarrinho('Halteres de Pelúcia', 8.50)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Rosquinha">
+                <h3>Rosquinha</h3>
+                <div class="preco">R$ 6,50</div>
+                <button onclick="adicionarAoCarrinho('Rosquinha', 6.50)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Halteres de Osso com Mordedor">
+                <h3>Halteres de Osso com Mordedor</h3>
+                <div class="preco">R$ 15,00</div>
+                <button onclick="adicionarAoCarrinho('Halteres de Osso com Mordedor', 15.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Halteres">
+                <h3>Halteres</h3>
+                <div class="preco">R$ 8,50</div>
+                <button onclick="adicionarAoCarrinho('HHalteres', 8.50)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Coleira para Gato">
+                <h3>Coleira para Gato</h3>
+                <div class="preco">R$ 9,00</div>
+                <button onclick="adicionarAoCarrinho('Coleira para Gato', 9.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Cortador de Unha">
+                <h3>Cortador de Unha</h3>
+                <div class="preco">R$ 10,00</div>
+                <button onclick="adicionarAoCarrinho('Cortador de Unha', 10.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Escova anti-Pulga">
+                <h3>Escova anti-Pulga</h3>
+                <div class="preco">R$ 8,00</div>
+                <button onclick="adicionarAoCarrinho('Escova anti-Pulga', 8.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Escova">
+                <h3>Escova</h3>
+                <div class="preco">R$ 18,00</div>
+                <button onclick="adicionarAoCarrinho('Escova', 18.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Luva de Pêlo">
+                <h3>Luva de Pêlo</h3>
+                <div class="preco">R$ 20,00</div>
+                <button onclick="adicionarAoCarrinho('Luva de Pêlo', 20.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Escova Rasqueadeira">
+                <h3>Escova Rasqueadeira</h3>
+                <div class="preco">R$ 15,00</div>
+                <button onclick="adicionarAoCarrinho('Escova Rasqueadeira', 15.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Kit Cata-Caca">
+                <h3>Kit Cata-Caca</h3>
+                <div class="preco">R$ 9,00</div>
+                <button onclick="adicionarAoCarrinho('Kit Cata-Caca', 9.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Kit Cata-Caca Pet Words">
+                <h3>Kit Cata-Caca Pet Words</h3>
+                <div class="preco">R$ 16,00</div>
+                <button onclick="adicionarAoCarrinho('Kit Cata-Caca Pet Words', 16.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Coleira para gato">
+                <h3>Coleira para gato </h3>
+                <div class="preco">R$ 17,90</div>
+                <button onclick="adicionarAoCarrinho('Coleira para gato ', 17.90)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Comedouro de plástico">
+                <h3>Comedouro de plástico </h3>
+                <div class="preco">R$ 18,00</div>
+                <button onclick="adicionarAoCarrinho('Comedouro de plástico ', 18.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Coleira Tam 4">
+                <h3>Coleira Tam 4</h3>
+                <div class="preco">R$ 15,90</div>
+                <button onclick="adicionarAoCarrinho('Coleira Tam 4', 15.90)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Poleiro de plástico para calopsita">
+                <h3>Poleiro de plástico para calopsita</h3>
+                <div class="preco">R$ 13,00</div>
+                <button onclick="adicionarAoCarrinho('Poleiro de plástico para calopsita', 13.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Bebedouro de beija flor">
+                <h3>Bebedouro de beija flor </h3>
+                <div class="preco">R$ 15,00</div>
+                <button onclick="adicionarAoCarrinho('Bebedouro de beija flor', 15.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Bolinha de Basquete">
+                <h3>Bolinha de Basquete</h3>
+                <div class="preco">R$ 8,00</div>
+                <button onclick="adicionarAoCarrinho('Bolinha de Basquete', 8.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Halteres de Cachorrinho">
+                <h3>Halteres de Cachorrinho</h3>
+                <div class="preco">R$ 7,90</div>
+                <button onclick="adicionarAoCarrinho('Halteres de Cachorrinho', 7.90)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Banho seco">
+                <h3>Banho seco</h3>
+                <div class="preco">R$ 16,00</div>
+                <button onclick="adicionarAoCarrinho('Banho seco', 16.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Shampoo 6 a 1">
+                <h3>Shampoo 6 a 1</h3>
+                <div class="preco">R$ 18,90</div>
+                <button onclick="adicionarAoCarrinho('Shampoo 6 a 1', 18.90)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Shampoo vegano">
+                <h3>Shampoo vegano</h3>
+                <div class="preco">R$ 15,00</div>
+                <button onclick="adicionarAoCarrinho('Shampoo vegano', 15.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Shampoo Protec">
+                <h3>Shampoo Protec</h3>
+                <div class="preco">R$ 20,00</div>
+                <button onclick="adicionarAoCarrinho('Shampoo Protec', 20.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Shampoo Rex">
+                <h3>Shampoo Rex</h3>
+                <div class="preco">R$ 15,90</div>
+                <button onclick="adicionarAoCarrinho('Shampoo Rex', 15.90)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Lucky dog Perfume">
+                <h3>Lucky dog Perfume</h3>
+                <div class="preco">R$ 22,00</div>
+                <button onclick="adicionarAoCarrinho('Lucky dog Perfume', 22.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Comedouro de madeira e alumino">
+                <h3>Comedouro de madeira e alumino</h3>
+                <div class="preco">R$ 50,00</div>
+                <button onclick="adicionarAoCarrinho('Comedouro de madeira e alumino', 50.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Ossinho">
+                <h3>Ossinho</h3>
+                <div class="preco">R$ 5,00</div>
+                <button onclick="adicionarAoCarrinho('Ossinho', 5.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Macaco Preto e Marrom de Pelúcia">
+                <h3>Macaco Preto e Marrom de Pelúcia</h3>
+                <div class="preco">R$ 25,00</div>
+                <button onclick="adicionarAoCarrinho('Macaco Preto e Marrom de Pelúcia', 25.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Gambá de Pelúcia">
+                <h3>Gambá de Pelúcia</h3>
+                <div class="preco">R$ 22,00</div>
+                <button onclick="adicionarAoCarrinho('Gambá de Pelúcia', 22.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Cachorrinho de Pelúcia">
+                <h3>Cachorrinho de Pelúcia</h3>
+                <div class="preco">R$ 20,00</div>
+                <button onclick="adicionarAoCarrinho('Cachorrinho de Pelúcia', 20.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Pato de Pelúcia">
+                <h3>Pato de Pelúcia</h3>
+                <div class="preco">R$ 22,00</div>
+                <button onclick="adicionarAoCarrinho('Pato de Pelúcia', 22.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Polvo de Pelúcia">
+                <h3>Polvo de Pelúcia</h3>
+                <div class="preco">R$ 19,00</div>
+                <button onclick="adicionarAoCarrinho('Polvo de Pelúcia', 19.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Elefante de Pelúcia">
+                <h3>Elefante de Pelúcia</h3>
+                <div class="preco">R$ 20,00</div>
+                <button onclick="adicionarAoCarrinho('Elefante de Pelúcia', 20.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Baleia de Pelúcia">
+                <h3>Baleia de Pelúcia</h3>
+                <div class="preco">R$ 22,00</div>
+                <button onclick="adicionarAoCarrinho('Pato Pelúcia', 22.00)">Comprar</button>
+            </div>
+
+            <div class="brinquedo">
+                <img src="" alt="Abacaxi de Pelúcia">
+                <h3>Abacaxi de Pelúcia</h3>
+                <div class="preco">R$ 18,00</div>
+                <button onclick="adicionarAoCarrinho('Abacaxi de Pelúcia', 18.00)">Comprar</button>
+            </div>
+        </div>
+    </main>  
+
+    <script src="carrinho.js"></script>
+</body>
+</html>

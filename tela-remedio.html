@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tela-remedio-style.css">
+    
+    <title>Gpet - Remedios</title>
+</head>
+<body>
+    <header>
+        <header class="header">
+            <a href="index.html"><img src="imgs/Logo .png" alt="Logo"></a>
+
+            <div class="search-box">
+                <form>
+                    <input type="text" placeholder="O que você procura ?">
+                </form>
+            </div>
+
+            <div class="icons">
+                <img src="imgs/perfil.png" alt="Usuário">
+                <img src="imgs/carrinho.png" alt="carrinho">
+                <img src="imgs/favorito.png" alt="Favoritos">
+                <img src="imgs/contato.png" alt="Contatos">
+            </div>
+        </header>
+    </header>
+
+    <main>
+        <div class="remedios" id="listaRemedios">
+
+            <div class="remedio">
+                <img src="" alt="Tussedan">
+                <h3>Tussedan 100ML</h3>
+                <div class="preco">R$ 40,00</div>
+                <button onclick="adicionarAoCarrinho('Tussedan 100ML', 40.00)">Comprar</button>
+            </div>
+
+            <div class="remedio">
+                <img src="" alt="Talfon">
+                <h3>Talfon 100GR</h3>
+                <div class="preco">R$ 9,00</div>
+                <button onclick="adicionarAoCarrinho('Talfon 100GR', 9.00)">Comprar</button>
+            </div>
+
+            <div class="remedio">
+                <img src="" alt="Monovin">
+                <h3>Monovin 20ML</h3>
+                <div class="preco">R$ 45,00</div>
+                <button onclick="adicionarAoCarrinho('Monovin 20ML', 45.00)">Comprar</button>
+            </div>
+
+            <div class="remedio">
+                <img src="" alt="NatuVerm">
+                <h3>NatuVerm 4CP</h3>
+                <div class="preco">R$ 15,00</div>
+                <button onclick="adicionarAoCarrinho('NatuVerm 4CP', 15.00)">Comprar</button>
+            </div>
+
+            <div class="remedio">
+                <img src="" alt="Carnex">
+                <h3>Carnex</h3>
+                <div class="preco">R$ 12,00</div>
+                <button onclick="adicionarAoCarrinho('Carnex', 12.00)">Comprar</button>
+            </div>
+
+            <div class="remedio">
+                <img src="" alt="Capstar Verde">
+                <h3>Capstar Verde 57MG</h3>
+                <div class="preco">R$ 23,00</div>
+                <button onclick="adicionarAoCarrinho('Capstar Verde 57MG', 23.00)">Comprar</button>
+            </div>
+
+            <div class="remedio">
+                <img src="" alt="Capstar Azul">
+                <h3>Capstar Azul 57MG</h3>
+                <div class="preco">R$ 23,00</div>
+                <button onclick="adicionarAoCarrinho('Capstar Azul 57MG', 23.00)">Comprar</button>
+            </div>
+
+            <div class="remedio">
+                <img src="" alt="Sabao Matacura">
+                <h3>Sabão Matacura 80GR</h3>
+                <div class="preco">R$ 15,00</div>
+                <button onclick="adicionarAoCarrinho('Sabão Matacura 80GR', 15.00)">Comprar</button>
+            </div>
+            
+
+
+        </div>
+    </main>
+    
+    <script src="carrinho.js"></script>
+</body>
+</html>
