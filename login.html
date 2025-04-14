@@ -81,5 +81,32 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="cadastro_login.js"> </script>
     
+    <script>
+
+    async function login() {
+        const email = document.getElementById('email').value;
+        const senha = document.getElementById('senha').value;
+    
+        try {
+            await auth.signInWithEmailAndPassword(email, senha);
+            alert('login Realizado!');
+            return true;
+        }catch (error ){
+            switch(error.code){
+                case 'auth/user-not-found':
+                    alert('usuário não encontrado');
+                    break;
+                case 'auth/wrong-password':
+                    alert('Senha Incorreta');
+                    break;
+                    default:
+                    alert('erro' + error.message);
+            }
+            return false;
+        }
+    } </script>
+
+
+
 </body>
 </html>

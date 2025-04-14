@@ -496,3 +496,16 @@ margin: 10px 0;
     right: 15px;
     border-color: transparent transparent white transparent;
 }
+
+#username {
+    font-weight: bold;
+    color: #1b6dc0;
+  }
+#user-display {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+  }
