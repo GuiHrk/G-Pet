@@ -1,32 +1,32 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+ header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.navbar {
     display: flex;
-    flex-direction: column;
-  }
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-.header {
-        background: #ffffff;
-        padding: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 2px solid #e0e0e0;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-.header img {
-    width: 80px;
-    margin-left: 15px;
+.logo-home img {
+    max-height: 120px;
+    width: auto;
 }
 
 .search-box {
@@ -37,30 +37,61 @@ body {
 .search-box input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.icons {
+.search-box input:focus{
+    outline: none;
+    border-color: #004000;
+    box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.2);
+}
+
+.nav-itens {
     display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-right: 25px;
-}
- 
-.icons img:first-child {
-    margin-right: -5px; 
+    gap: 45px;
 }
 
-.icons img {
-    max-height: 35px;  
+.nav-itens img {
+    max-height: 30px;
     width: auto;
     transition: transform 0.3s ease;
 }
 
-.icons img:hover {
-    transform: scale(1.3); 
+.nav-itens img:hover {
+    transform: scale(1.6);
+}
+
+@media ( max-width: 768px) {
+    .navbar{
+        gap:15px;
+        padding:10px;
+    }
+.logo-home img { 
+    max-height:80px ;
+}
+.nav-itens{
+    gap:20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.nav-itens img {
+    max-height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-itens {
+        gap: 15px;
+    }
+
+    .logo-home img {
+        max-height: 60px;
+    }
 }
 
 main{
@@ -124,7 +155,7 @@ main{
   .preco{
     font-size: 20px;
     font-weight: bold;
-    color: #006400;
+    color: #28a745;
     text-align: center;
   }
   
@@ -146,5 +177,5 @@ main{
   }
   
   .remedio button:hover {
-    background-color: #006400;
+    background-color: #218838;
   }

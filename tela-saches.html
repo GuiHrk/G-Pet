@@ -9,22 +9,38 @@
 </head>
 <body>
     <header>
-        <header class="header">
-            <a href="index.html"><img src="imgs/Logo .png" alt="Logo"></a>
-
-            <div class="search-box">
-                <form>
-                    <input type="text" placeholder="O que você procura ?">
-                </form>
-            </div>
-
-            <div class="icons">
-                <img src="imgs/perfil.png" alt="Usuário">
-                <img src="imgs/carrinho.png" alt="carrinho">
-                <img src="imgs/favorito.png" alt="Favoritos">
-                <img src="imgs/contato.png" alt="Contatos">
-            </div>
-        </header>
+            <nav class="navbar">
+                <div class="logo-home">
+                    <a href="index.html"><img src="imgs/Logo .png" alt="Logo"></a>
+                </div>
+                <div class="search-box">
+                  <form id="pesquisaForm">
+                      <input type="text" id="searchInput" placeholder="O que você procura ?" />
+                  </form>
+              </div>
+                </div>   
+                
+                <div id="user-display"> 
+                      <span id="username"></span>
+                  </div>
+  
+                <div class="nav-itens">
+  
+                   <div class="icon-container"> 
+                  <a href=""><img src="imgs/perfil.png" alt="Login"></a>
+               </div>
+      
+               <div class="icon-container"> 
+                    <a href=""><img src="imgs/carrinho.png" alt="Carrinho"></a>
+                  </div>
+                  <div class="icon-container">
+                    <a href=""><img src="imgs/favorito.png" alt="Favoritos"></a>
+                  </div> 
+  
+                <div class="icon-container"> 
+                    <a href=""><img src="imgs/contato.png" alt="Contatos"></a>
+                </div> 
+            </div> 
     </header>
 
     <main>
@@ -96,5 +112,6 @@
     </main>  
 
     <script src="carrinho.js"></script>
+    <script src="busca-sache.js"></script>
 </body>
 </html>

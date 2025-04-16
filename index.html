@@ -29,9 +29,10 @@
                   <a href="#"><img src="imgs/Logo .png" alt="Logo"></a>
               </div>
               <div class="search-box">
-                  <form>
-                      <input type="text" placeholder="O que você procura ? ">
-                  </form>
+                <form id="pesquisaForm">
+                    <input type="text" id="searchInput" placeholder="O que você procura ?" />
+                </form>
+            </div>
               </div>   
               
               <div id="user-display"> 
@@ -44,36 +45,32 @@
                  <div class="icon-container"> 
                 <a href=""><img src="imgs/perfil.png" alt="Login"></a>
                  <div class="hover-menu right"> 
-                        <h3> Já possui cadastro ?   </h3>
-                        <li><a href="login.html">  Entrar </a></li>
-                        <li><a href="cadastro.html"> Criar Conta</a></li>
+                        <a href="login.html" class="btn-login">Entrar</a>
+                        <a href="cadastro.html" class="link-cadastro">Criar Conta</a>
                  </div>
              </div>
     
              <div class="icon-container"> 
                   <a href=""><img src="imgs/carrinho.png" alt="Carrinho"></a>
                     <div class="hover-menu left">
-                        <h3> Acompanhar carrinho : <a href="#X"> Aqui !</a>   </h3>
-                        
+                        <a href="#X" class="btn-carrinho">Ver Carrinho</a>
                     </div>
                 </div>
 
                 <div class="icon-container">
                   <a href=""><img src="imgs/favorito.png" alt="Favoritos"></a>
-                    <div class="hover-menu right"> 
+                    <div class="hover-menu right favoritos-menu"> 
                          <h3> Itens Favoritos </h3>
-
                     </div>
                 </div> 
 
               <div class="icon-container"> 
                   <a href=""><img src="imgs/contato.png" alt="Contatos"></a>
-                    <div class="hover-menu left">
+                    <div class="hover-menu left contato-menu">
                     <h3>  Contato  </h3>
-                    
-                    <li> <a href=""> Localização !  </a></li>
-                    <li><a href=""> Contatos !</a></li>
-                    <li> <a href=""> Quem Somos Nós ? </a>  </li>
+                    <li> <a href="#">Localização</a></li>
+                    <li><a href="#">Contatos</a></li>
+                    <li> <a href="#">Quem Somos Nós?</a>  </li>
                     
                     </div>
                 </div>
@@ -208,6 +205,7 @@
 
       <script src="carrinho.js"></script>
       <script src="login-usuario.js"></script>
+      <script src="busca-index.js"></script>
   </body>
   </html>
   

@@ -1,16 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
 function adicionarAoCarrinho(nome, preco) {

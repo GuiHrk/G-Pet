@@ -38,21 +38,150 @@ header {
 .search-box input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box input:focus{
+    outline: none;
+    border-color: #004000;
+    box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.2);
 }
 
 .nav-itens {
     display: flex;
     gap: 45px;
+    position: relative;
 }
 
 .nav-itens img {
     max-height: 30px;
     width: auto;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
+
+.hover-menu {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    min-width: 200px;
+    text-align: center;
+    z-index: 999;
+}
+
+.icon-container:hover .hover-menu {
+    display: block;
+}
+
+.btn-login {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #006400;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.btn-login:hover {
+    background-color: #218838;
+}
+
+.link-cadastro {
+    display: block;
+    font-size: 14px;
+    color: #28a745;
+    text-decoration: none;
+}
+
+.link-cadastro:hover {
+    text-decoration: underline;
+}
+
+.hover-menu.left {
+    right: auto;
+    left: 0;
+}
+
+
+.btn-carrinho {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #006400;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-carrinho:hover {
+    background-color: #218838;
+}
+
+.favoritos-menu {
+    min-width: 160px;
+    padding: 10px 14px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.favoritos-menu h3 {
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+}
+
+
+.contato-menu {
+    min-width: 180px;
+    background-color: #f1f1f1;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+}
+
+.contato-menu h3 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+}
+
+.contato-menu li {
+    list-style: none;
+    margin: 6px 0;
+}
+
+.contato-menu a {
+    text-decoration: none;
+    color: #006400;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.contato-menu a:hover {
+    color: #218838;
+}
+
 
 .nav-itens img:hover {
     transform: scale(1.6);
@@ -190,14 +319,14 @@ main {
 }
 
 .preco {
-    color: #054113;
+    color:#28a745 ;
     font-size: 1.4em;
     font-weight: bold;
     margin: 15px 0;
 }
 
 .buy-btn {
-    background: #004000;
+    background: #006400;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -208,7 +337,7 @@ main {
 }
 
 .buy-btn:hover {
-    background: #004000;
+    background: #218838;
 }
 @media (max-width: 480px) {
     .product-grid {
@@ -236,7 +365,7 @@ main {
 }
 
 .product button {
-    background-color: #004000;
+    background-color: #006400;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -246,7 +375,7 @@ main {
 }
 
 .product button:hover {
-    background-color: #004000;
+    background-color: #218838;
 }
 
 
@@ -271,7 +400,7 @@ main {
 }
 
 .cart button {
-    background-color: #004000;
+    background-color: #006400;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -281,7 +410,7 @@ main {
 }
 
 .cart button:hover {
-    background-color: #004000;
+    background-color: #218838;
 }
 
 @media( max-width:768px){
@@ -323,7 +452,7 @@ main {
 .login-modal button, .register-modal button {
     width: 100%;
     padding: 10px;
-    background-color: #004000;
+    background-color: #006400;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -332,7 +461,7 @@ main {
 }
 
 .login-modal button:hover, .register-modal button:hover {
-    background-color: #004000;
+    background-color: #006400;
 }
 
 .hidden {
@@ -425,7 +554,7 @@ overflow: hidden;
     height: auto;
     position: static;
     color: #333;
-    background-color: #004000;
+    background-color: #006400;
     text-align: center;
     cursor: pointer;
     padding: 30px 20px;
