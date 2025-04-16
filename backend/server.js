@@ -10,6 +10,21 @@ const PORT = process.env.PORT || 5500;
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/',async (req, res) =>{
+  res.send('O Servidor está online');
+});
+
+app.get('/checkout-session/sessionId',async (req, res)=>{
+  try{
+    const session = await stripe.checkout.sessions.retrieve(req.params.sessionId);
+    res.json(session);
+  }catch (error){
+    res.status(400).json({error: error.message});
+  }
+})
+
+
+
 app.post('/create-checkout-session', async (req, res) => {
     const { productName, amount, userEmail } = req.body;
 
@@ -30,8 +45,8 @@ app.post('/create-checkout-session', async (req, res) => {
             },
           ],
           customer_email: userEmail,
-          success_url: 'https://Gpet/pagamento-sucesso.html',
-          cancel_url: 'https://Gpet/pagamento-cancelado.html', });
+          success_url: 'pagamento-sucesso.html',
+          cancel_url: 'pagamento-cancelado.html', });
 
           res.json({ id: session.id });
   } catch (error) {
