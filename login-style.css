@@ -1,9 +1,7 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
@@ -23,6 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -35,6 +34,7 @@ header {
 .search-box {
     flex: 1;
     margin: 0 20px;
+    min-width: 200px;
 }
 
 .search-box input {
@@ -47,7 +47,7 @@ header {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.search-box input:focus{
+.search-box input:focus {
     outline: none;
     border-color: #004000;
     box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.2);
@@ -57,6 +57,8 @@ header {
     display: flex;
     gap: 45px;
     position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-itens img {
@@ -65,7 +67,6 @@ header {
     transition: transform 0.3s ease;
     cursor: pointer;
 }
-
 
 .background-stripes {
     background: repeating-linear-gradient(180deg, white, white 100px, #004000 100px, #004000 140px);
@@ -76,14 +77,12 @@ header {
     padding-top: 50px;
 }
 
-
 .outer-box {
     background: #fdfaf2;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
-
 
 .login-box {
     background: #e0e0e0;
@@ -112,7 +111,6 @@ header {
     font-size: 16px;
 }
 
-
 .login-box button {
     width: 100%;
     padding: 15px;
@@ -127,13 +125,15 @@ header {
 .login-box button:hover {
     background: #002d00;
 }
-.icon-container { 
+
+.icon-container {
     position: relative;
     display: inline-block;
 }
-.hover-menu{
+
+.hover-menu {
     position: absolute;
-    top:  calc(100% + 10px);
+    top: calc(100% + 10px);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
@@ -143,31 +143,36 @@ header {
     width: 200px;
     border-radius: 5px 2px 3px;
 }
-.icon-container:hover > .hover-menu{
+
+.icon-container:hover > .hover-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(5px);
 }
+
 .nav-itens > .icon-container {
     isolation: isolate;
 }
-.hover-menu.left{
+
+.hover-menu.left {
     left: 0;
     right: auto;
 }
-.hover-menu.right{
+
+.hover-menu.right {
     right: 0;
     left: auto;
 }
 
-.hover-menu::before{
+.hover-menu::before {
     content: '';
     position: absolute;
     bottom: 100%;
     border-width: 8px;
     border-style: solid;
 }
-.hover-menu.left::before{
+
+.hover-menu.left::before {
     left: 15px;
     border-color: transparent transparent white transparent;
 }
@@ -175,5 +180,55 @@ header {
 .hover-menu.right::before {
     right: 15px;
     border-color: transparent transparent white transparent;
-    
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .nav-itens {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .login-box {
+        width: 90%;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .logo-home img {
+        max-height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .login-box input,
+    .login-box button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .hover-menu {
+        width: 160px;
+    }
+
+    .nav-itens {
+        gap: 15px;
+    }
 }
