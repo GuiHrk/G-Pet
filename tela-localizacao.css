@@ -100,7 +100,7 @@
   }
   
   .card-header {
-    background: #7ED957;
+    background: #46862a;
     border-radius: 20px;
     padding: 10px;
     margin-bottom: 20px;
@@ -140,7 +140,7 @@
   }
   
   .image-box img {
-    width: 150px;
+    width: 200px;
     max-width: 100%;
   }
   

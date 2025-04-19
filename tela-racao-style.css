@@ -139,40 +139,76 @@ main{
 main{
   padding: 20px
 }
-
-.hover-menu left{
-  position: absolute;
-  top: 120%;
-  right: 0;
+.carrinho-sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 300px;
+  height: 100%;
   background-color: #fff;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  display: none;
-  min-width: 200px;
-  text-align: center;
-  z-index: 999;
+  box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+  transition: right 0.3s ease;
 }
 
-.icon-container:hover .hover-menu {
-  display: block;
+.carrinho-sidebar.aberto {
+  right: 0;
 }
 
-.btn-carrinho {
-  display: inline-block;
-  width: 100%;
-  padding: 10px 0;
-  background-color: #006400;
-  color: white;
+.carrinho-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carrinho-header h2 {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.carrinho-header button {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.carrinho-itens {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.carrinho-itens li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.carrinho-botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.carrinho-botoes button {
+  padding: 10px;
+  border: none;
   border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.btn-carrinho:hover {
-  background-color: #218838;
+.carrinho-botoes button:first-child {
+  background-color: #f0f0f0;
+}
+
+.carrinho-botoes button:last-child {
+  background-color: #7ED957;
+  color: white;
 }
 
 .racoes {

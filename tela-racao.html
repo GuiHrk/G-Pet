@@ -1,155 +1,150 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gpet - Rações</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="tela-racao-style.css">
-</head>
 
+    <title>Gpet - Rações</title>
+</head>
 <body>
-    <header class="bg-white shadow-sm py-2 px-3">
-        <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
+    <header>
+        <nav class="navbar">
             <div class="logo-home">
                 <a href="index.html"><img src="imgs/Logo .png" alt="Logo"></a>
             </div>
-            <div class="search-box flex-grow-1 mx-3">
-                <form id="pesquisaForm">
-                    <input type="text" id="searchInput" class="form-control" placeholder="O que você procura ?">
-                </form>
-            </div>
-            <div class="d-flex align-items-center gap-3 nav-itens">
-                <a href=""><img src="imgs/perfil.png" alt="Login"></a>
-                <div class="icon-container"> 
-                    <a href=""><img src="imgs/carrinho.png" alt="Carrinho"></a>
-                      <div class="hover-menu left">
-                          <a href="index.html" class="btn-carrinho">Ver Carrinho</a>
-                      </div>
-                  </div>
-                <a href=""><img src="imgs/favorito.png" alt="Favoritos"></a>
-                <a href=""><img src="imgs/contato.png" alt="Contatos"></a>
-            </div>
-        </div>
-    </header>
+            <div class="search-box">
+              <form id="pesquisaForm">
+                  <input type="text" id="searchInput" placeholder="O que você procura ?" />
+              </form>
+          </div>
+            </div>   
+            
+            <div id="user-display"> 
+                  <span id="username"></span>
+              </div>
 
-    <main class="container py-4">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="listaRacoes">
-            <div class="col">
-                <div class="racao h-100">
-                    <img src="imgs/racao-golden-special-para-caes-adultos-frango-e-carne-3310549-15kg-Frente (1).png" alt="Golden Special Frango e Carne">
-                    <h3>Golden Special Frango e Carne 15kg</h3>
-                    <p>Porte Grande Adulto</p>
-                    <div class="preco">R$ 149,00</div>
-                    <button class="btn btn-success" onclick="adicionarAoCarrinho('Golden Special Frango e Carne 15kg', 149.00)">Comprar</button>
-                </div>
+            <div class="nav-itens">
+
+               <div class="icon-container"> 
+              <a href=""><img src="imgs/perfil.png" alt="Login"></a>
+           </div>
+  
+           <div class="icon-container"> 
+            <a href=""><img src="imgs/carrinho.png" alt="Carrinho"></a>
+              </div>
+              <div class="icon-container">
+                <a href=""><img src="imgs/favorito.png" alt="Favoritos"></a>
+              </div> 
+
+            <div class="icon-container"> 
+                <a href=""><img src="imgs/contato.png" alt="Contatos"></a>
+            </div> 
+        </div> 
+</header>
+    
+    <main>
+        <div class="racoes" id="listaRacoes">
+            
+            <div class="racao">
+                <img src="imgs/racao-golden-special-para-caes-adultos-frango-e-carne-3310549-15kg-Frente (1).png" alt="Golden Special Frango e Carne">
+                <h3>Golden Special Frango e Carne 15kg</h3>
+                <p>Porte Grande Adulto</p>
+                <div class="preco">R$ 149,00</div>
+                <button onclick="adicionarAoCarrinho('Golden Special Frango e Carne 15kg', 149.00)">Adicionar ao Carrinho</button>
             </div>
-            <div class="col">
-                <div class="racao h-100">
-                    <img src="12 racoes/Golden Formula Frango 15kg.png" alt="Golden Formula Frango">
-                    <h3>Golden Formula Frango 15kg</h3>
-                    <p>Porte Grande Adulto</p>
-                    <div class="preco">R$ 165,00</div>
-                    <button class="btn btn-success" onclick="adicionarAoCarrinho('Golden Formula Frango 15kg', 165.00)">Comprar</button>
-                </div>
+
+            <div class="racao">
+                <img src="12 racoes/Golden Formula Frango 15kg.png" alt="Golden Formula Frango">
+                <h3>Golden Formula Frango 15kg</h3>
+                <p>Porte Grande Adulto</p>
+                <div class="preco">R$ 165,00</div>
+                <button onclick="adicionarAoCarrinho('Golden Formula Frango 15kg', 165.00)">Adicionar ao Carrinho</button>
             </div>
-            <div class="col">
-                <div class="racao h-100">
-                    <img src="12 racoes/Golden Formula Carne 15kg.png" alt="Golden Formula Carne">
-                    <h3>Golden Formula Carne 15kg</h3>
-                    <p>Porte Grande Adulto</p>
-                    <div class="preco">R$ 165,00</div>
-                    <button class="btn btn-success" onclick="adicionarAoCarrinho('Golden Formula Carne 15kg', 165.00)">Comprar</button>
-                </div>
+
+            <div class="racao">
+                <img src="12 racoes/Golden Formula Carne 15kg.png" alt="Golden Formula Carne">
+                <h3>Golden Formula Carne 15kg</h3>
+                <p>Porte Grande Adulto</p>
+                <div class="preco">R$ 165,00</div>
+                <button onclick="adicionarAoCarrinho('Golden Formula Carne 15kg', 165.00)">Adicionar ao Carrinho</button>
             </div>
-            <div class="col">
-                <div class="racao h-100">
-                    <img src="12 racoes/Golden Mega Frango e Arroz 15kg.png" alt="Golden Mega Frango e Arroz">
-                    <h3>Golden Mega Frango e Arroz 15kg</h3>
-                    <p>Porte Grande Adulto</p>
-                    <div class="preco">R$ 165,00</div>
-                    <button class="btn btn-success" onclick="adicionarAoCarrinho('Golden Mega Frango e Arroz15kg', 165.00)">Comprar</button>
-                </div>
+
+            <div class="racao">
+                <img src="12 racoes/Golden Mega Frango e Arroz 15kg.png" alt="Golden Mega Frango e Arroz">
+                <h3>Golden Mega Frango e Arroz 15kg</h3>
+                <p>Porte Grande Adulto</p>
+                <div class="preco">R$ 165,00</div>
+                <button onclick="adicionarAoCarrinho('Golden Mega Frango e Arroz15kg', 165.00)">Adicionar ao Carrinho</button>
             </div>
-            <div class="col">
-                <div class="racao h-100">
-                    <img src="12 racoes/Golden Power Training 15kg.png" alt="Golden Power Training">
-                    <h3>Golden Power Training 15kg</h3>
-                    <p>Porte Grande Adulto</p>
-                    <div class="preco">R$ 175,00</div>
-                    <button class="btn btn-success" onclick="adicionarAoCarrinho('Golden Power Training 15kg', 175.00)">Comprar</button>
-                </div>
+
+            <div class="racao">
+                <img src="12 racoes/Golden Power Training 15kg.png" alt="Golden Power Training">
+                <h3>Golden Power Training 15kg</h3>
+                <p>Porte Grande Adulto</p>
+                <div class="preco">R$ 175,00</div>
+                <button onclick="adicionarAoCarrinho('Golden Power Training 15kg', 175.00)">Adicionar ao Carrinho</button>
             </div>
-            <div class="col">
-                <div class="racao h-100">
-                    <img src="12 racoes/Premier Formula Carne 15kg.png" alt="Premier Formula Carne">
-                    <h3>Premier Formula Carne 15kg</h3>
-                    <p>Porte Grande Adulto</p>
-                    <div class="preco">R$ 250,00</div>
-                    <button class="btn btn-success" onclick="adicionarAoCarrinho('Premier Formula Carne 15kg', 250.00)">Comprar</button>
-                </div>
+
+            <div class="racao">
+                <img src="12 racoes/Premier Formula Carne 15kg.png" alt="Premier Formula Carne">
+                <h3>Premier Formula Carne 15kg</h3>
+                <p>Porte Grande Adulto</p>
+                <div class="preco">R$ 250,00</div>
+                <button onclick="adicionarAoCarrinho('Premier Formula Carne 15kg', 250.00)">Adicionar ao Carrinho</button>
             </div>
-            <div class="col">
-                <div class="racao h-100">
-                    <img src="12 racoes/Origens Class Frango e Carne 15kg.png" alt="Origens Class Frango e Carne">
-                    <h3>Origens Class Frango e Carne 15kg</h3>
-                    <p>Porte Grande Adulto</p>
-                    <div class="preco">R$ 140,00</div>
-                    <button class="btn btn-success" onclick="adicionarAoCarrinho('Origens Class Frango e Carne 15kg', 140.00)">Comprar</button>
-                </div>
+
+            <div class="racao">
+                <img src="12 racoes/Origens Class Frango e Carne 15kg.png" alt="Origens Class Frango e Carne">
+                <h3>Origens Class Frango e Carne 15kg</h3>
+                <p>Porte Grande Adulto</p>
+                <div class="preco">R$ 140,00</div>
+                <button onclick="adicionarAoCarrinho('Origens Class Frango e Carne 15kg', 140.00)">Adicionar ao Carrinho</button>
             </div>
-            <div class="col">
-                <div class="racao h-100">
-                    <img src="12 racoes/Luck Dog Carne 15kg.webp" alt="Luck Dog Carne">
-                    <h3>Luck Dog Carne 15kg</h3>
-                    <p>Porte Grande Adulto</p>
-                    <div class="preco">R$ 85,00</div>
-                    <button class="btn btn-success" onclick="adicionarAoCarrinho('Luck Dog Carne 15kg', 80.00)">Comprar</button>
-                </div>
+
+            <div class="racao">
+                <img src="12 racoes/Luck Dog Carne 15kg.webp" alt="Luck Dog Carne">
+                <h3>Luck Dog Carne 15kg</h3>
+                <p>Porte Grande Adulto</p>
+                <div class="preco">R$ 85,00</div>
+                <button onclick="adicionarAoCarrinho('Luck Dog Carne 15kg', 80.00)">Adicionar ao Carrinho</button>
             </div>
-            <div class="col">
-                <div class="racao h-100">
-                    <img src="12 racoes/Nhac 15kg.png" alt="Nhac">
-                    <h3>Nhac 15kg</h3>
-                    <p>Porte Grande Adulto</p>
-                    <div class="preco">R$ 100,00</div>
-                    <button class="btn btn-success" onclick="adicionarAoCarrinho('Nhac 15kg', 100.00)">Comprar</button>
-                </div>
+
+            <div class="racao">
+                <img src="12 racoes/Nhac 15kg.png" alt="Nhac">
+                <h3>Nhac 15kg</h3>
+                <p>Porte Grande Adulto</p>
+                <div class="preco">R$ 100,00</div>
+                <button onclick="adicionarAoCarrinho('Nhac 15kg', 100.00)">Adicionar ao Carrinho</button>
             </div>
-            <div class="col">
-                <div class="racao h-100">
-                    <img src="12 racoes/Magnus Todo dia 15kg.png" alt="Magnus Todo dia Carne">
-                    <h3>Magnus Todo dia Carne 15kg</h3>
-                    <p>Porte Grande Adulto</p>
-                    <div class="preco">R$ 100,00</div>
-                    <button class="btn btn-success" onclick="adicionarAoCarrinho('Magnus Todo dia Carne 15kg', 100.00)">Comprar</button>
-                </div>
+
+            <div class="racao">
+                <img src="12 racoes/Magnus Todo dia 15kg.png" alt="Magnus Todo dia Carne">
+                <h3>Magnus Todo dia Carne 15kg</h3>
+                <p>Porte Grande Adulto</p>
+                <div class="preco">R$ 100,00</div>
+                <button onclick="adicionarAoCarrinho('Magnus Todo dia Carne 15kg', 100.00)">Adicionar ao Carrinho</button>
             </div>
-            <div class="col">
-                <div class="racao h-100">
-                    <img src="12 racoes/Magnus Chips 15kg.png" alt="Magnus Chips">
-                    <h3>Magnus Chips 15kg</h3>
-                    <p>Porte Grande Adulto</p>
-                    <div class="preco">R$ 110,00</div>
-                    <button class="btn btn-success" onclick="adicionarAoCarrinho('Magnus Chips 15kg', 110.00)">Comprar</button>
-                </div>
+
+            <div class="racao">
+                <img src="12 racoes/Magnus Chips 15kg.png" alt="Magnus Chips">
+                <h3>Magnus Chips 15kg</h3>
+                <p>Porte Grande Adulto</p>
+                <div class="preco">R$ 110,00</div>
+                <button onclick="adicionarAoCarrinho('Magnus Chips 15kg', 110.00)">Adicionar ao Carrinho</button>
             </div>
-            <div class="col">
-                <div class="racao h-100">
-                    <img src="12 racoes/Gran Plus Frango e Carne 15kg.png" alt="Gran Plus Frango e Carne">
-                    <h3>Gran Plus Frango e Carne 15kg</h3>
-                    <p>Porte Grande Adulto</p>
-                    <div class="preco">R$ 140,00</div>
-                    <button class="btn btn-success" onclick="adicionarAoCarrinho('Gran Plus Frango e Carne 15kg', 140.00)">Comprar</button>
-                </div>
+
+            <div class="racao">
+                <img src="12 racoes/Gran Plus Frango e Carne 15kg.png" alt="Gran Plus Frango e Carne">
+                <h3>Gran Plus Frango e Carne 15kg</h3>
+                <p>Porte Grande Adulto</p>
+                <div class="preco">R$ 140,00</div>
+                <button onclick="adicionarAoCarrinho('Gran Plus Frango e Carne 15kg', 140.00)">Adicionar ao Carrinho</button>
             </div>
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="carrinho.js"></script>
     <script src="busca-racao.js"></script>
 </body>
-
 </html>
