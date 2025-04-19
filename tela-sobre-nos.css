@@ -1,0 +1,131 @@
+/* Cabeçalho já existente */
+header {
+    width: 100%;
+    background-color: #7ED957;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  header {
+    width: 100%;
+    background-color: #7ED957;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-home img {
+    max-height: 120px;
+    width: auto;
+}
+
+.search-box {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box input:focus{
+    outline: none;
+    border-color: #004000;
+    box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.2);
+}
+
+.nav-itens {
+    display: flex;
+    gap: 45px;
+}
+
+.nav-itens img {
+    max-height: 30px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.nav-itens img:hover {
+    transform: scale(1.6);
+}
+  
+  /* Quem Somos - Estilo */
+  .about-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .about-text {
+    flex: 1 1 500px;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .about-img {
+    flex: 1 1 400px;
+    text-align: center;
+  }
+  
+  .about-img img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text h2 {
+      font-size: 1.6rem;
+    }
+  
+    .about-text p {
+      font-size: 1rem;
+    }
+  
+    .about-img img {
+      max-width: 100%;
+    }
+  }
+  

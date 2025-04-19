@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to right, #d4ffe4 50%, #FFFFFF 50%);
+  }
+  
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-home img {
+    max-height: 120px;
+    width: auto;
+}
+
+.search-box {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box input:focus{
+    outline: none;
+    border-color: #004000;
+    box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.2);
+}
+
+.nav-itens {
+    display: flex;
+    gap: 45px;
+}
+
+.nav-itens img {
+    max-height: 30px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.nav-itens img:hover {
+    transform: scale(1.6);
+}
+  /* MAIN CARD */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding-top: 40px;
+  }
+  
+  .card {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-header {
+    background-color: #2E7D32;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .contact-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .icon-circle {
+    background-color: #E0F7E9;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: #2E7D32;
+  }
+  
+  .contact-info {
+    flex: 1;
+  }
+  
+  .contact-info h4 {
+    margin-bottom: 4px;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .contact-info p {
+    margin: 0;
+  }
+  
+  .highlight {
+    color: #2E7D32;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .subtext {
+    color: #999;
+    font-size: 0.9rem;
+  }

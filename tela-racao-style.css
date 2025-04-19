@@ -53,135 +53,207 @@ body {
 .nav-itens {
     display: flex;
     gap: 45px;
+    position: relative;
 }
 
 .nav-itens img {
     max-height: 30px;
     width: auto;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .nav-itens img:hover {
     transform: scale(1.6);
 }
 
+.hover-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+  min-width: 200px;
+  text-align: center;
+  z-index: 999;
+}
+
+.icon-container:hover .hover-menu {
+  display: block;
+}
+
+.btn-carrinho {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #006400;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn-carrinho:hover {
+  background-color: #218838;
+}
+
 @media ( max-width: 768px) {
-    .navbar{
-        gap:15px;
-        padding:10px;
-    }
+  .navbar{
+      gap:15px;
+      padding:10px;
+  }
 .logo-home img { 
-    max-height:80px ;
+  max-height:80px ;
 }
 .nav-itens{
-    gap:20px;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  gap:20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .nav-itens img {
-    max-height: 25px;
-    }
+  max-height: 25px;
+  }
 }
 
 @media (max-width: 480px) {
-    .nav-itens {
-        gap: 15px;
-    }
+  .nav-itens {
+      gap: 15px;
+  }
 
-    .logo-home img {
-        max-height: 60px;
-    }
+  .logo-home img {
+      max-height: 60px;
+  }
 }
+
 
 main{
     padding: 20px
 }
 
-.racoes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    width: 100%;
-  }
-  
-  .racao {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  @media (max-width: 1200px) {
-    .container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media (max-width: 800px) {
-    .container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 500px) {
-    .container {
-      grid-template-columns: 1fr;
-    }
-  }
-  .racao:hover {
-    transform: translateY(-5px);
-  }
-  
-  .racao img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  .racao h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-  
-  .racao p {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
+main{
+  padding: 20px
+}
 
-  .preco{
-    font-size: 20px;
-    font-weight: bold;
-    color: #28a745;
-    text-align: center;
+.hover-menu left{
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+  min-width: 200px;
+  text-align: center;
+  z-index: 999;
+}
+
+.icon-container:hover .hover-menu {
+  display: block;
+}
+
+.btn-carrinho {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #006400;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn-carrinho:hover {
+  background-color: #218838;
+}
+
+.racoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.racao {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .racao strong {
-    font-size: 18px;
-    color: green;
-    display: block;
-    margin-bottom: 12px;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .racao button {
-    background-color: darkgreen;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
   }
-  
-  .racao button:hover {
-    background-color: #218838;
-  }
+}
+.racao:hover {
+  transform: translateY(-5px);
+}
+
+.racao img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.racao h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.preco{
+  font-size: 20px;
+  font-weight: bold;
+  color: #28a745;
+  text-align: center;
+}
+
+.racao strong {
+  font-size: 18px;
+  color: green;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.racao button {
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.racao button:hover {
+  background-color: #218838;
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetShop - Localização</title>
+  <link rel="stylesheet" href="tela-localizacao.css" />
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <nav class="navbar">
+        <div class="logo-home">
+            <a href="index.html"><img src="imgs/Logo .png" alt="Logo"></a>
+        </div>
+        <div class="search-box">
+            <form>
+                <input type="text" placeholder="O que você procura ? ">
+            </form>
+        </div>   
+        <div class="nav-itens">
+           <div class="icon-container"> 
+          <a href=""><img src="imgs/perfil.png" alt="Login"></a>
+       </div>
+       <div class="icon-container"> 
+            <a href=""><img src="imgs/carrinho.png" alt="Carrinho"></a>
+          </div>
+          <div class="icon-container">
+            <a href=""><img src="imgs/favorito.png" alt="Favoritos"></a>
+          </div> 
+        <div class="icon-container"> 
+            <a href=""><img src="imgs/contato.png" alt="Contatos"></a>
+          </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="wrapper">
+    <div class="card">
+      <div class="card-header">
+        <h2>Venha nos Visitar</h2>
+      </div>
+      <p>
+        Seu pet vai amar conhecer nosso cantinho! 🐕🐈<br />
+        Traga ele para um passeio cheio de carinho, cuidados e mimos!<br />
+        Estamos te esperando com muito amor e patinhas abertas 🐾❤️
+      </p>
+      <button onclick="abrirMapa()">Como Chegar</button>
+    </div>
+
+    <div class="image-box">
+      <img src="imgs/world-location-colored-stroke-icon-0c503e.PNG" alt="Mapa" />
+    </div>
+  </main>
+
+  <script src="func-local.js"></script>
+</body>
+</html>
