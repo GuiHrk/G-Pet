@@ -30,7 +30,7 @@ app.post('/create-checkout-session', async (req, res) => {
 
     try {
         const session = await stripe.checkout.sessions.create({
-          payment_method_types: ['card','pix'],
+          payment_method_types: ['card'],
           mode: 'payment',
           line_items: [
             {
@@ -45,8 +45,8 @@ app.post('/create-checkout-session', async (req, res) => {
             },
           ],
           customer_email: userEmail,
-          success_url: 'pagamento-sucesso.html',
-          cancel_url: 'pagamento-cancelado.html', });
+          success_url: 'https://guihrk.github.io/G-Pet/pagamento-sucesso.html',
+          cancel_url: 'https://guihrk.github.io/G-Pet/pagamento-cancelado.html', });
 
           res.json({ id: session.id });
   } catch (error) {
