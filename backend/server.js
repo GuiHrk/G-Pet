@@ -4,17 +4,17 @@ const bodyParser = require('body-parser');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); 
 
 
-const app = express();
+app.use = express.json();
 const PORT = process.env.PORT || 5500;
 
 app.use(cors());
+app.use = (express.json());
 app.use(bodyParser.json());
-
 app.get('/',async (req, res) =>{
-  res.send('O Servidor está online');
+  res.send('O Servidor está online Plenamente');
 });
 
-app.get('/checkout-session/sessionId',async (req, res)=>{
+app.get('/checkout-session/:sessionId',async (req, res)=>{
   try{
     const session = await stripe.checkout.sessions.retrieve(req.params.sessionId);
     res.json(session);
@@ -23,29 +23,19 @@ app.get('/checkout-session/sessionId',async (req, res)=>{
   }
 })
 
-
-
 app.post('/create-checkout-session', async (req, res) => {
-    const { productName, amount, userEmail } = req.body;
+    const { items, userEmail } = req.body;
 
     try {
         const session = await stripe.checkout.sessions.create({
           payment_method_types: ['card'],
           mode: 'payment',
-          line_items: [
-            {
-              price_data: {
-                currency: 'brl',
-                product_data: {
-                  name: productName,
-                },
-                unit_amount: amount * 100, 
-              },
-              quantity: 1,
-            },
-          ],
-          customer_email: userEmail,
-          success_url: 'https://guihrk.github.io/G-Pet/pagamento-sucesso.html',
+          line_items: items.map(item => ({
+            price: item.price_id,
+            quantity: item.quantity || 1,
+          })),
+          customer_email: userEmail || undefined,
+          success_url: 'https://guihrk.github.io/G-Pet/pagamento-sucesso.html?session_id={CHECKOUT_SESSION_ID}',
           cancel_url: 'https://guihrk.github.io/G-Pet/pagamento-cancelado.html', });
 
           res.json({ id: session.id });
