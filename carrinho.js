@@ -6,7 +6,8 @@ function adicionarAoCarrinho( price_id) {
   if(produto) {
     carrinho.push({
       nome: produto.nome,
-      price_id: produto.price_id
+      price_id: produto.price_id,
+      preco: produto.preco
     });
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
     alert(`${produto.nome} foi adicionado ao carrinho`);
@@ -41,6 +42,8 @@ function atualizarCarrinho() {
   let total = 0;
 
   carrinho.forEach((item, index) => {
+    const preco = item.preco || 0;
+
     const div = document.createElement('div');
     div.innerHTML = `
       ${item.nome} - R$ ${item.preco.toFixed(2)}
