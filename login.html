@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login-style.css">
-    <link rel="script" href="login-cadastro.js">
 
     <title>Gpet - Login</title>
 </head>
@@ -48,8 +47,8 @@
         <div class="outer-box">
             <div class="login-box">
                 <img src="imgs/Logo .png" alt="Logo">
-                <input type="email" placeholder="E-mail">
-                <input type="password" placeholder="Senha">
+                <input type="email" id="email" placeholder="E-mail">
+                <input type="password" id="senha"  placeholder="Senha">
                 <button onclick="login()">ENTRAR</button>
             </div>
         </div>
@@ -67,9 +66,16 @@
         const email = document.getElementById('email').value;
         const senha = document.getElementById('senha').value;
     
+        if(!email || !senha){
+            alert("Por Favor, Preencha todos os campos");
+            return;
+        }
+
+
         try {
-            await auth.signInWithEmailAndPassword(email, senha);
+            await firebase.auth().signInWithEmailAndPassword(email, senha);
             alert('login Realizado!');
+            window.location.href = "index.html"
             return true;
         }catch (error ){
             switch(error.code){
@@ -84,9 +90,23 @@
             }
             return false;
         }
-    } </script>
+      
+    } 
 
-
-
+    firebase.auth().onAuthStateChanged(user => {
+        const currentPage = window.location.pathname;
+        
+    if (user && currentPage !== "/login.html") {
+    window.location.href = "index.html";
+    }
+    if (user) {
+    console.log('Usuário logado:', user.email);
+    } else {
+    console.log('Usuário não logado');
+     }
+    });
+    
+    window.login = login;
+    </script>
 </body>
 </html>
