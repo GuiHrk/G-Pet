@@ -43,6 +43,7 @@
                  <div class="hover-menu right"> 
                         <a href="login.html" class="btn-login">Entrar</a>
                         <a href="cadastro.html" class="link-cadastro">Criar Conta</a>
+                        <button id="logout-btn" style="display: block;">Sair </button>
                  </div>
              </div>
     
@@ -190,6 +191,7 @@
               <h2>Carrinho Total: </h2>
               <div id="cart-items"></div>
               <p>Total: R$ <span id="cart-total">0,00</span></p>
+              <div id="user-info"> </div>
               <button onclick="checkout()">Finalizar Compra</button>
           </section>
 
@@ -221,6 +223,28 @@
       <script src="produtos.js"></script>
       <script src="cadastro_login.js"></script>
       <script src="busca-index.js"></script>
+  
+    <script> firebase.auth().onAuthStateChanged(function(user){
+       const userInfoDiv = document.getElementById('user-info');
+       const logoutBtn = document.getElementById('logout-btn');
+       
+       if(user){
+            userInfoDiv.textContent = `Bem-Vindo, ${user.email}`;
+            logoutBtn.style.display = 'block';
+        }else{
+            userInfoDiv.textContent = `Você não está logado`;
+            logoutBtn.style.display = 'none';
+        }
+    });
+
+        document.getElementById('logout-btn').addEventListener('click', () =>{
+            firebase.auth().signOut().then(() => {
+                window.location.reload();
+            });
+        });
+
+    </script>
+
   
 
   </body>
