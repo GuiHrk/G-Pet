@@ -12,8 +12,9 @@ function adicionarAoCarrinho( price_id) {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
     alert(`${produto.nome} foi adicionado ao carrinho`);
     atualizarCarrinho();
+  } else {
+    alert("Produto não encontrado!")
   }
-
 }
 
 //  if(!produto) {
