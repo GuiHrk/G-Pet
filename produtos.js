@@ -1,6 +1,6 @@
 const produtos = [
  
-    { id: 1, nome: "Golden Special 15kg", preco: 149.00, price_id: "prod_S72jZHCA0dyBia" },
+    { id: 1, nome: "Golden Special 15kg", preco: 149.00, price_id: "price_1RCoe609NS3qEz85fzSodjU6" },
     { id: 2, nome: "Golden Formula Frango 15kg", preco: 165.00, price_id: "prod_S74k7t2eoXX3EE" },
     { id: 3, nome: "Golden Formula Carne 15kg", preco: 165.00, price_id: "prod_S74lfXKUo1aZMK" },
     { id: 4, nome: "Golden Mega Frango e Arroz 15kg", preco: 165.00, price_id: "prod_S74mtm0rs6j9TW" },

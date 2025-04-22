@@ -89,6 +89,7 @@ async function checkout() {
     console.log("Erro ao Processar o Checkout:", error );
     alert("Erro ao Processar o Pagamento");
   }
+  console.log("Itens enviados ao backend:", items);
 
 
   //alert("Compra finalizada!");
