@@ -638,3 +638,16 @@ margin: 10px 0;
     background: #f0f0f0;
     border-radius: 5px;
   }
+
+#logout-btn{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #006400;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 8px;
+}
