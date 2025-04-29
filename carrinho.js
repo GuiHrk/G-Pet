@@ -1,6 +1,6 @@
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-function adicionarAoCarrinho(nome, preco, foto) {
+function adicionarAoCarrinho(nome, preco, foto, price_id) {
   const itemExistente = carrinho.find(p => p.nome === nome);
 
   if (itemExistente) {
@@ -10,6 +10,7 @@ function adicionarAoCarrinho(nome, preco, foto) {
       nome: nome,
       preco: preco,
       foto: foto,
+      price_id: price_id,
       quantidade: 1
     });
   }
@@ -25,13 +26,14 @@ function atualizarContadorCarrinho() {
   const cartCount = document.getElementById('cartCount');
   const quantidadeProdutos = carrinho.reduce((total, item) => total + item.quantidade, 0); // Soma a quantidade de todos os produtos
 
-  // Exibe o contador, e define o número de itens no carrinho
+  if(cartCount){
   if (quantidadeProdutos > 0) {
-    cartCount.textContent = quantidadeProdutos; // Atualiza o número no contador
-    cartCount.style.display = 'inline-block'; // Exibe o contador
+    cartCount.textContent = quantidadeProdutos; 
+    cartCount.style.display = 'inline-block'; 
   } else {
-    cartCount.style.display = 'none'; // Oculta o contador se o carrinho estiver vazio
+    cartCount.style.display = 'none'; 
   }
+ }
 }
 function removerDoCarrinho(index) {
   carrinho.splice(index, 1);
@@ -64,6 +66,11 @@ function atualizarCarrinho() {
   }
 
   carrinho.forEach((item, index) => {
+    if (!item.foto) {
+      console.error("Produto sem imagem:", item);
+      return; 
+    }
+    
     const preco = item.preco || 0;
     const div = document.createElement('div');
     div.classList.add('cart-item');
@@ -109,20 +116,17 @@ function closeCart() {
   document.getElementById("cartModal").classList.remove("show");
 }
 
-window.onload = () => {
-  atualizarCarrinho();
-  atualizarContadorCarrinho();
-};
-
 function mostrarToast(mensagem) {
   const toast = document.getElementById("alertToast");
-  console.log("Toast sendo exibido");  // Verifique se o código chega até aqui
+  if(!toast){
+    console.error("Elemento 'alertToast não encontrado'");
+  }
   toast.textContent = mensagem;
   toast.classList.add("show");
 
   setTimeout(() => {
     toast.classList.remove("show");
-  }, 3000); // some após 3 segundos
+  }, 3000); 
 }
 async function checkout() {
   if (carrinho.length === 0) {
@@ -132,8 +136,9 @@ async function checkout() {
 
   const items = carrinho.map(item => ({
     price_id: item.price_id,
-    quantity: 1
+    quantity: item.quantidade
   }));
+
 
   try {
     const response = await fetch('https://g-pet.onrender.com/create-checkout-session',{
@@ -163,12 +168,9 @@ async function checkout() {
   atualizarCarrinho();
   atualizarContadorCarrinho();
 
-  //alert("Compra finalizada!");
-  //carrinho = [];
-  //localStorage.removeItem('carrinho');
-  //atualizarCarrinho();
-}
-window.onload = () => {
+  }
+  window.onload = () => {
   atualizarCarrinho();
   atualizarContadorCarrinho();
-};
+  };
+ 
