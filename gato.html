@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tela-racao-style.css">
+
+    <title>Gpet - Rações</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-home">
+                <a href="index.html"><img src="imgs/Logo .png" alt="Logo"></a>
+            </div>
+            <div class="search-box">
+              <form id="pesquisaForm">
+                  <input type="text" id="searchInput" placeholder="O que você procura ?" />
+              </form>
+          </div>
+            </div>   
+            
+            <div id="user-display"> 
+                  <span id="username"></span>
+              </div>
+
+            <div class="nav-itens">
+
+               <div class="icon-container"> 
+              <a href=""><img src="imgs/perfil.png" alt="Login"></a>
+           </div>
+  
+           <div class="icon-container"> 
+            <a href=""><img src="imgs/carrinho.png" alt="Carrinho"></a>
+              </div>
+              <div class="icon-container">
+                <a href=""><img src="imgs/favorito.png" alt="Favoritos"></a>
+              </div> 
+
+            <div class="icon-container"> 
+                <a href=""><img src="imgs/contato.png" alt="Contatos"></a>
+            </div> 
+        </div> 
+</header>
+    
+    <main>
+        <div class="racoes" id="listaRacoes">
+            
+            <div class="racao">
+                <img src="Rações/racao golden para gatos adultos -Frango - 10kg.webp" alt="golden para gatos adultos - Frango">
+                <h3>Golden para gatos adultos - Frango 10kg</h3>
+                <p>Ração Gatos adultos</p>
+                <div class="preco">R$ 165,00</div>
+                <button onclick="adicionarAoCarrinho('golden para gatos adultos - Frango 10kg', 165.00, 'Rações/racao golden para gatos adultos -Frango - 10kg.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/Ração Golden para Gatos adultos -Salmao - 10,1kg.webp" alt="Golden para Gatos adultos -Salmao">
+                <h3>Golden para Gatos adultos -Salmao 1kg</h3>
+                <p>Ração Gatos adultos</p>
+                <div class="preco">R$ 25,00</div>
+                <button onclick="adicionarAoCarrinho('Golden para Gatos adultos -Salmao 1kg', 25.00, 'Rações/Ração Golden para Gatos adultos -Salmao - 10,1kg.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/Ração Luck Cat mix - 25kg.png" alt="Ração Luck Cat mix">
+                <h3>Ração Luck Cat mix</h3>
+                <p>Ração Gatos adultos</p>
+                <div class="preco">R$ 85,00</div>
+                <button onclick="adicionarAoCarrinho('Ração Luck Cat mix', 85.00, 'Rações/Ração Luck Cat mix - 25kg.png')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="imgs/racao akira.png" alt="AkilesCat para gatos adultos">
+                <h3>AkilesCat para gatos adultos</h3>
+                <p>Ração Gatos adultos</p>
+                <div class="preco">R$ 75,00</div>
+                <button onclick="adicionarAoCarrinho('AkilesCat para gatos adultos ', 75.00, 'imgs/racao akira.png')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/Ração GOLDEN para GATOS castrados - SALMAO- 10,1KG.webp" alt="GOLDEN para GATOS castrados">
+                <h3>Golden para Gatos castrados 10kg</h3>
+                <p>Ração Para Gatos Castrados</p>
+                <div class="preco">R$ 170,00</div>
+                <button onclick="adicionarAoCarrinho('GOLDEN para GATOS castrados', 170.00, 'Rações/Ração GOLDEN para GATOS castrados - SALMAO- 10,1KG.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/racao golden para gatos castrados - carne - 10kg.webp" alt="racao golden para gatos castrados - carne">
+                <h3>Golden para gatos castrados - carne 1kg</h3>
+                <p>Ração Para Gatos Castrados</p>
+                <div class="preco">R$ 23,00</div>
+                <button onclick="adicionarAoCarrinho('racao golden para gatos castrados - carne 1kg', 23.00, 'Rações/racao golden para gatos castrados - carne - 10kg.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/Ração magnus para gatos castrados - frango.png" alt="Magnus  Frango recheio 20kg">
+                <h3>Magnus  Frango recheio 20kg</h3>
+                <p>Ração Para Gatos Castrados</p>
+                <div class="preco">R$ 225,00</div>
+                <button onclick="adicionarAoCarrinho('Magnus  Frango recheio 20kg', 225.00, 'Rações/Ração magnus para gatos castrados - frango.png')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/Ração Luck Cat Premium para gatos castrados - frango e arroz.webp" alt="Luck Cat Premium para gatos castrados - frango e arroz">
+                <h3>Luck Cat Premium para gatos castrados - frango e arroz 10kg</h3>
+                <p>Ração Para Gatos Castrados</p>
+                <div class="preco">R$ 74,25</div>
+                <button onclick="adicionarAoCarrinho('Luck Cat Premium para gatos castrados - frango e arroz 10kg', 74.25, 'Rações/Ração Luck Cat Premium para gatos castrados - frango e arroz.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="imgs/Racao Golden Gatos Castrados - Frango 10,1 kg.webp.webp" alt="Racao Golden Gatos Castrados - Frango 10,1">
+                <h3>Golden Gatos Castrados - Frango 10kg</h3>
+                <p>Ração Para Gatos Castrados</p>
+                <div class="preco">R$ 171,85</div>
+                <button onclick="adicionarAoCarrinho('Racao Golden Gatos Castrados - Frango 10,1', 171.85, 'imgs/Racao Golden Gatos Castrados - Frango 10,1 kg.webp.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="imgs/Ração Golden para Gatos Adultos - Carne - 10,1kg.webp" alt="Ração Golden para Gatos Adultos - Carne - 10,1kg">
+                <h3>Golden para Gatos Adultos - Carne - 10kg</h3>
+                <p>Ração Para Gatos Castrados</p>
+                <div class="preco">R$ 156,89</div>
+                <button onclick="adicionarAoCarrinho('Ração Golden para Gatos Adultos - Carne - 10,1kg', 156.89, 'imgs/Ração Golden para Gatos Adultos - Carne - 10,1kg.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="produtos.js"></script>
+    <script src="carrinho.js"></script>
+    <script src="busca-racao.js"></script>
+
+    <div id="alertToast" class="toast">Produto adicionado ao carrinho!</div>
+</body>
+</html>

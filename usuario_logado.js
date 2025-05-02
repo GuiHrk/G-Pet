@@ -12,8 +12,8 @@ onAuthStateChanged(auth, (user) => {
 
 function displayerUserInfo(user){
     const usernameElement = document.getElementById('username');
-
     const displayName = user.displayName || user.email.split('@')[0];
 
-    usernameElement.textContent = 'Olá, ${displayName}!';
+    usernameElement.textContent = `Olá, ${displayName}!`;
 }
+

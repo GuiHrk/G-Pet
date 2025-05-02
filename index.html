@@ -21,6 +21,9 @@
 <body>
       <header>
           <nav class="navbar">
+
+            <div id="user-info"> </div>
+
               <div class="logo-home">
                   <a href="#"><img src="imgs/Logo .png" alt="Logo"></a>
               </div>
@@ -89,7 +92,7 @@
               <h2>Categotias </h2>
               <div class="category-grid"> 
                 
-                <a href="tela-objetos.html" class="category-item" style="background-image: url(imgs/gato\ IA.jpg);"> 
+                <a href="tela-objetos-gato.html" class="category-item" style="background-image: url(imgs/gato\ IA.jpg);"> 
                     <div class="category-overlay">
                         <span> Gato </span>
                     </div>
@@ -97,7 +100,7 @@
                 </a>
 
               
-                <a href="tela-objetos.html" class="category-item" style="background-image: url(imgs/Cachorro\ IA.jpg);"> 
+                <a href="tela-objetos-cachorro.html" class="category-item" style="background-image: url(imgs/Cachorro\ IA.jpg);"> 
                     <div class="category-overlay">
                         <span> Cachorro </span>
                     </div>
@@ -105,14 +108,14 @@
                 </a>
 
                  
-                <a href="tela-objetos.html" class="category-item" style="background-image: url(imgs/passarinho\ IA.jpg);"> 
+                <a href="passarinho.html" class="category-item" style="background-image: url(imgs/passarinho\ IA.jpg);"> 
                     <div class="category-overlay">
                         <span> Passarinho </span>
                 </div>
                 </a>
                  
                
-                <a href="tela-objetos.html" class="category-item" style="background-image: url(imgs/peixe\ IA.jpg);"> 
+                <a href="peixe.html" class="category-item" style="background-image: url(imgs/peixe\ IA.jpg);"> 
                     <div class="category-overlay">
                         <span> Peixe </span>
                     </div>
@@ -155,14 +158,19 @@
             <p class="descricao">Ração rica em proteínas</p>
             <p class="preco">R$ 149,00</p>
             <button class="buy-btn" onclick="adicionarAoCarrinho('Golden Special 15kg', 149.00, 'imgs/racao-gato.png', 'price_1RCoe609NS3qEz85fzSodjU6')">Comprar</button>
-
+                  
         </div>
 
                     <div class="product-card">
             <h3>Golden Formula Frango 15kg</h3>
             <p class="descricao">Ração rica em proteínas</p>
             <p class="preco">R$ 165,00</p>
-            <button class="buy-btn" onclick="adicionarAoCarrinho('price_1RCqap09NS3qEz85iNsQUhxW')">Comprar</button>
+            <button class="buy-btn" onclick="adicionarAoCarrinho('Golden Formula Frango 15kg', 165.00, 'imgs/racao-gato.png', 'price_1RCqap09NS3qEz85iNsQUhxW')">Comprar</button>
+           <!-- Teste de versão-->
+           
+
+
+
         </div>
       
                    
@@ -170,55 +178,58 @@
             <h3>Golden Formula Carne 15kg </h3>
             <p class="descricao">Ração rica em proteínas</p>
             <p class="preco">R$ 165,00</p>
-            <button class="buy-btn" onclick="adicionarAoCarrinho('price_1RCqbz09NS3qEz85c6nL7OUi')" >Comprar</button>
+            <button class="buy-btn" onclick="adicionarAoCarrinho('Golden Formula Carne 15kg', 165.00, 'imgs/racao-gato.png', 'price_1RCqbz09NS3qEz85c6nL7OUi')">Comprar</button>
         </div>
 
         <div class="product-card">
             <h3>Golden Mega Frango e Arroz 15kg</h3>
             <p class="descricao">Ração rica em proteínas</p>
             <p class="preco">R$ 165,00</p>
-            <button class="buy-btn" onclick="adicionarAoCarrinho('prod_S74mprice_1RCqd509NS3qEz85LLZ8xR5Xtm0rs6j9TW')">Comprar</button>
+            <button class="buy-btn" onclick="adicionarAoCarrinho('Golden Mega Frango e Arroz 15kg', 165.00, 'imgs/racao-gato.png', 'price_1RCqd509NS3qEz85LLZ8xR5X')">Comprar</button>
         </div>
 
         <div class="product-card">
-            <h3>Golden Special Frango e Carne 15Kg</h3>
+            <h3>Golden Power Training Adulto 15kg</h3>
             <p class="descricao">Ração rica em proteínas</p>
-            <p class="preco">R$ 149,00</p>
-            <button class="buy-btn">Comprar</button>
+            <p class="preco">R$ 175,00</p>
+            <button class="buy-btn" onclick="adicionarAoCarrinho('Golden Power Training Adulto 15kg', 175.00, 'imgs/racao-gato.png', 'price_1RCqe509NS3qEz85G8PovfW0')">Comprar</button>
         </div>
 
                     <div class="product-card">
-            <h3>Golden Formula Frango 15kg</h3>
+            <h3>Premier Formula Carne Adulto 15kg</h3>
             <p class="descricao">Ração rica em proteínas</p>
-            <p class="preco">R$ 165,00</p>
-            <button class="buy-btn" >Comprar</button>
+            <p class="preco">R$ 250,00</p>
+            <button class="buy-btn" onclick="adicionarAoCarrinho('Premier Formula Carne Adulto 15kg', 250.00, 'imgs/racao-gato.png', 'price_1RCqfN09NS3qEz85P2dqI0x1')">Comprar</button>
         </div>
                      
                    
                   <div class="product-card">
-            <h3>Golden Formula Carne 15kg </h3>
+            <h3>Origens Class Frango e Carne Adulto 15kg </h3>
             <p class="descricao">Ração rica em proteínas</p>
-            <p class="preco">R$ 165,00</p>
-            <button class="buy-btn">Comprar</button>
+            <p class="preco">R$ 140,00</p>
+            <button class="buy-btn" onclick="adicionarAoCarrinho('Origens Class Frango e Carne Adulto 15kg', 140.00, 'imgs/racao-gato.png', 'price_1RCqg809NS3qEz85aaL6UjCA')">Comprar</button>
         </div>
 
         <div class="product-card">
-            <h3>Golden Mega Frango e Arroz 15kg</h3>
+            <h3>Luck dog Carne Adulto 15kg</h3>
             <p class="descricao">Ração rica em proteínas</p>
-            <p class="preco">R$ 165,00</p>
-            <button class="buy-btn">Comprar</button>
+            <p class="preco">R$ 85,00</p>
+            <button class="buy-btn" onclick="adicionarAoCarrinho('Luck dog Carne Adulto 15kg', 85.00, 'imgs/racao-gato.png', 'price_1RCqhu09NS3qEz85g3npkiP6')">Comprar</button>
         </div>
              
+              </div>
+
+<script> document.querySelectorAll('.buy-btn').forEach(btn => {
+  const onclick = btn.getAttribute('onclick');
+  if (onclick && onclick.startsWith("adicionarAoCarrinho('prod_")) {
+    console.warn("Removendo botão com onclick incorreto:", onclick);
+    btn.closest('.product-card')?.remove(); 
+  }
+});
+</script>
+
           </section>
   
-          <section class="cart" id="X">
-              <h2>Carrinho Total: </h2>
-              <div id="cart-items"></div>
-              <p>Total: R$ <span id="cart-total">0,00</span></p>
-              <div id="user-info"> </div>
-              <button onclick="checkout()">Finalizar Compra</button>
-          </section>
-
         <section class="footer"> 
 
                 <a href="politicas-privacidade.html"> politicas-privacidade e Termos de Uso © </a>

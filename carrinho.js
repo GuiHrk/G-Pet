@@ -1,7 +1,13 @@
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
 function adicionarAoCarrinho(nome, preco, foto, price_id) {
-  const itemExistente = carrinho.find(p => p.nome === nome);
+  if(!nome || !preco || !foto || !price_id){
+    console.error("Dados inválidos ao adicionar ao carrinho:", nome, preco,foto,price_id );
+    mostrarToast("Erro: dados do produto incompletos.");
+  }
+
+  
+  const itemExistente = carrinho.find(p => p.price_id === price_id);
 
   if (itemExistente) {
     itemExistente.quantidade += 1;
@@ -19,7 +25,7 @@ function adicionarAoCarrinho(nome, preco, foto, price_id) {
   atualizarCarrinho();
   mostrarToast("Produto adicionado ao carrinho!");
   atualizarContadorCarrinho();
-  
+  console.log("Dados recebidos:", nome, preco, foto, price_id);
 }
 
 function atualizarContadorCarrinho() {
@@ -46,7 +52,7 @@ function atualizarCarrinho() {
   const container = document.getElementById('cartItems');
   const totalSpan = document.getElementById('cartTotal');
   const emptyMessage = document.getElementById('emptyCartMessage');
-  console.log(container);  // Verifique se o elemento está sendo encontrado
+  console.log(container);  
 
   if (!container) {
     console.error("Elemento 'cartItems' não encontrado!");
@@ -154,6 +160,11 @@ async function checkout() {
     if (data.id){
       const stripe = Stripe('pk_test_51RCoZV09NS3qEz85SN2uuux4UDWO2aHKwyxcK2yID1ZDv91TRwy8zck0gDWIN2ZNUlrMOJlPbGgHBuz25jFtcsch00X6ojyX6w');
       await stripe.redirectToCheckout({sessionId: data.id});
+      
+      carrinho = [];
+  localStorage.removeItem('carrinho');
+  atualizarCarrinho();
+  atualizarContadorCarrinho();
     } else {
       alert("Erro ao iniciar o pagamento");
     }
@@ -162,12 +173,7 @@ async function checkout() {
     alert("Erro ao Processar o Pagamento");
   }
   console.log("Itens enviados ao backend:", items);
-
-  carrinho = [];
-  localStorage.removeItem('carrinho');
-  atualizarCarrinho();
-  atualizarContadorCarrinho();
-
+  
   }
   window.onload = () => {
   atualizarCarrinho();

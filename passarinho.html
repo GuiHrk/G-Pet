@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tela-racao-style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/Gpet-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/Gpet-16x16.png">
+
+    <title>Gpet - Rações</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-home">
+                <a href="index.html"><img src="imgs/Logo .png" alt="Logo"></a>
+            </div>
+            <div class="search-box">
+              <form id="pesquisaForm">
+                  <input type="text" id="searchInput" placeholder="O que você procura ?" />
+              </form>
+          </div>
+            </div>   
+            
+            <div id="user-display"> 
+                  <span id="username"></span>
+              </div>
+
+            <div class="nav-itens">
+
+               <div class="icon-container"> 
+              <a href=""><img src="imgs/perfil.png" alt="Login"></a>
+           </div>
+  
+           <div class="icon-container"> 
+            <a href=""><img src="imgs/carrinho.png" alt="Carrinho"></a>
+              </div>
+              <div class="icon-container">
+                <a href=""><img src="imgs/favorito.png" alt="Favoritos"></a>
+              </div> 
+
+            <div class="icon-container"> 
+                <a href=""><img src="imgs/contato.png" alt="Contatos"></a>
+            </div> 
+        </div> 
+</header>
+    
+    <main>
+        <div class="racoes" id="listaRacoes">
+            
+            <div class="racao">
+                <img src="Rações/ração nutripasaros - coleira e papa-capim.jpg" alt="Ração nutripasaros - coleira e papa-capim">
+                <h3>Ração para Passaros Coleira e papa-capim</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 9,50</div>
+                <button onclick="adicionarAoCarrinho('Ração para Passaros Coleira e papa-capim', 9.50, 'Rações/ração nutripasaros - coleira e papa-capim.jpg')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/ração nutripassaro - curió e bicudo com tenébrio.webp" alt="Ração nutripassaro - curió e bicudo com tenébrio">
+                <h3>Ração para Passaros Curió e Bicudo com Tenébrio</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 20,99</div>
+                <button onclick="adicionarAoCarrinho('Ração para Passaros Curió e Bicudo com Tenébrio', 20.99, 'Rações/ração nutripassaro - curió e bicudo com tenébrio.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/ração nutripassaro - mistura para cardeal  e galo de campina.jpg" alt="ração nutripassaro - mistura para cardeal  e galo de campina">
+                <h3>Ração para Passaros Cardeal e Galo de Campina</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 10,90</div>
+                <button onclick="adicionarAoCarrinho('ração nutripassaro - mistura para cardeal  e galo de campina', 10.90, 'Rações/ração nutripassaro - mistura para cardeal  e galo de campina.jpg')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/ração nutripassaros - para passaro tico-ticão.webp" alt="Ração para Passaro Tico-Ticão">
+                <h3>Ração para Passaro Tico-Ticão</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 16,99</div>
+                <button onclick="adicionarAoCarrinho('Ração para Passaro Tico-Ticão', 16.99, 'Rações/ração nutripassaros - para passaro tico-ticão.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/ração nutripassaros - para pixarro - com milho.webp" alt="ração nutripassaros - para pixarro - com milho">
+                <h3>Ração para Passaro Pixarro - com milho</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 9,50</div>
+                <button onclick="adicionarAoCarrinho('raçã para pixarro - com milho', 9.50, 'Rações/ração nutripassaros - para pixarro - com milho.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/Ração nutripassaros - para passaro pixado - com milho verde.jfif" alt="Ração para Passaro pixarro - com milho verde">
+                <h3>Ração para Passaro pixarro - com milho verde</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 9,50</div>
+                <button onclick="adicionarAoCarrinho('Ração para Passaro pixarro - com milho verde', 9.50, 'Rações/Ração nutripassaros - para passaro pixado - com milho verde.jfif')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/Ração nutripassaros - para passaro Pixarro com fruta - 500g.webp" alt="Ração para Passaro Pixarro com fruta">
+                <h3>Ração para Passaro Pixarro com fruta</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 10,90</div>
+                <button onclick="adicionarAoCarrinho('Ração para Passaro Pixarro com fruta', 10.90, 'Rações/Ração nutripassaros - para passaro Pixarro com fruta - 500g')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/Ração nutripassaros - pixarro aroma de jabuticaba -5kg.webp" alt="Ração para Passaro Pixarro com aroma de jabuticaba">
+                <h3>Ração para Passaro Pixarro com aroma de jabuticaba</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 10,90</div>
+                <button onclick="adicionarAoCarrinho('Ração para Passaro Pixarro com aroma de jabuticaba', 10.90, 'Rações/Ração nutripassaros - pixarro aroma de jabuticaba -5kg.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/Ração nutripassaros -  calopsita, agapornis e Rose faces.jfif" alt="Ração para Passaro Calopsita, Agapornis e Rose faces">
+                <h3>Ração para Passaro Calopsita, Agapornis e Rose faces</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 8,50</div>
+                <button onclick="adicionarAoCarrinho('Ração para Passaro Calopsita, Agapornis e Rose faces', 8.50, 'Rações/Ração nutripassaros -  calopsita, agapornis e Rose faces.jfif')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/Ração nutripassaros - calopsita com frutas - 500g.webp" alt="Ração para Passaro Calopsita com frutas">
+                <h3>Ração para Passaro Calopsita com frutas</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 15,50</div>
+                <button onclick="adicionarAoCarrinho('Ração para Passaro Calopsita com frutas', 15.50, 'Rações/Ração nutripassaros - calopsita com frutas - 500g.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/Ração nutripassaros -  canario da terra - 500g.webp" alt="Ração para Passaro Canario da terra">
+                <h3>Ração para Passaro Canario da terra</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 12,50</div>
+                <button onclick="adicionarAoCarrinho('Ração para Passaro Canario da terra', 12.50, 'Rações/Ração nutripassaros -  canario da terra - 500g.webp')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="Rações/Ração nutripassaros - azulão premium para adultos.jpg" alt="Ração para Passaro Azulão premium para adultos">
+                <h3>Ração para Passaro Azulão premium para adultos</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 20,90</div>
+                <button onclick="adicionarAoCarrinho('Ração para Passaro Azulão premium para adultos', 20.90, 'Rações/Ração nutripassaros - azulão premium para adultos.jpg')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="imgs/Ração para Passaro Azulão com insetos.png" alt="Ração para Passaro Azulão com insetos">
+                <h3>Ração para Passaro Azulão com insetos</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 11,00</div>
+                <button onclick="adicionarAoCarrinho('Ração para Passaro Azulão com insetos', 11.00, 'imgs/Ração para Passaro Azulão com insetos.png')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="racao">
+                <img src="imgs/Ração para Passaro Coleirinha.png" alt="Ração para Passaro Coleirinha">
+                <h3>Ração para Passaro Coleirinha</h3>
+                <p>Ração Para Passaro</p>
+                <div class="preco">R$ 9,0</div>
+                <button onclick="adicionarAoCarrinho('Ração para Passaro Coleirinha', 9.0, 'imgs/Ração para Passaro Coleirinha.png')">Adicionar ao Carrinho</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="produtos.js"></script>
+    <script src="carrinho.js"></script>
+    <script src="busca-racao.js"></script>
+
+    <div id="alertToast" class="toast">Produto adicionado ao carrinho!</div>
+</body>
+</html>
