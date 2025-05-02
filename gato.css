@@ -251,6 +251,11 @@
     flex-direction: column;
     justify-content: space-between;
   }
+  .racao-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
   
   @media (max-width: 1200px) {
     .container {
@@ -268,6 +273,14 @@
     .container {
       grid-template-columns: 1fr;
     }
+  }
+
+  @media screen and (max-width: 768px){
+    .racao-container{
+      width: 100%;
+      flex-direction: column;
+    }
+
   }
   .racao:hover {
     transform: translateY(-5px);

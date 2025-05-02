@@ -148,6 +148,11 @@ main {
   text-align: center;
 }
 
+.brinquedo-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
 .brinquedo button {
   background-color: darkgreen;
   color: white;
@@ -171,6 +176,13 @@ main {
 @media (max-width: 800px) {
   .brinquedos {
       grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .brinquedo-container{
+    width: 100%;
+    flex-direction: column;
   }
 }
 

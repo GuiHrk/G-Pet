@@ -65,7 +65,13 @@
   .nav-itens img:hover {
       transform: scale(1.6);
   }
-  
+  .cadastro-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+
   @media ( max-width: 768px) {
       .navbar{
           gap:15px;
@@ -94,8 +100,12 @@
           max-height: 60px;
       }
   }
-
-
+  @media screen and (max-width: 768px){
+    .racao-container{
+      width: 100%;
+      flex-direction: column;
+    }
+  }
 .background-stripes {
     background: repeating-linear-gradient(180deg, white, white 100px, #004000 100px, #004000 140px);
     height: 100vh;

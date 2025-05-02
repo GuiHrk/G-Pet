@@ -269,6 +269,13 @@
       grid-template-columns: 1fr;
     }
   }
+
+  .racao-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
   .racao:hover {
     transform: translateY(-5px);
   }
@@ -312,6 +319,12 @@
   
   .racao button:hover {
     background-color: #218838;
+  }
+    @media screen and (max-width: 768px){
+      .racao-container{
+        width: 100%;
+        flex-direction: column;
+      }
   }
   
   

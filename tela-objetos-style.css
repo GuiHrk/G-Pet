@@ -82,6 +82,11 @@ body {
 .nav-itens img {
     max-height: 25px;
     }
+} 
+ .objetos-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
 @media (max-width: 480px) {
@@ -92,6 +97,12 @@ body {
     .logo-home img {
         max-height: 60px;
     }
+}
+@media screen and (max-width: 768px){
+  .objetos-container{
+    width: 100%;
+    flex-direction: column;
+  }
 }
 main {
     flex: 1;
