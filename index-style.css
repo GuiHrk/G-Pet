@@ -496,6 +496,11 @@ main {
 .categories ul li a:hover {
     background-color: #f0f0f0;
 }
+.racao-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
 
 @media (max-width:480px){
     .categories ul li a {
@@ -513,6 +518,13 @@ main {
     font-size: 1em;
 }
 
+
+@media screen and (max-width: 768px){
+    .racao-container{
+      width: 100%;
+      flex-direction: column;
+    }
+}
 }
     
 .product-grid {

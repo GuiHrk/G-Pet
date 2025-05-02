@@ -67,6 +67,11 @@
       transform: scale(1.6);
   }
   
+  .racao-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
   .hover-menu {
     position: absolute;
     top: 120%;
@@ -101,7 +106,12 @@
   .btn-carrinho:hover {
     background-color: #218838;
   }
-  
+  @media screen and (max-width: 768px){
+    .racao-container{
+      width: 100%;
+      flex-direction: column;
+    }
+  }
   @media ( max-width: 768px) {
     .navbar{
         gap:15px;

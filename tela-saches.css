@@ -91,7 +91,11 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
-
+.sache-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
 .sache:hover {
   transform: translateY(-5px);
 }
@@ -129,4 +133,10 @@ main {
 
 .sache button:hover {
   background-color: #218838;
+}
+@media screen and (max-width: 768px){
+  .sache-container{
+    width: 100%;
+    flex-direction: column;
+  }
 }

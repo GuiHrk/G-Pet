@@ -182,6 +182,12 @@ header {
     border-color: transparent transparent white transparent;
 }
 
+.login-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -230,5 +236,12 @@ header {
 
     .nav-itens {
         gap: 15px;
+    }
+
+    @media screen and (max-width: 768px){
+        .login-container{
+          width: 100%;
+          flex-direction: column;
+        }
     }
 }

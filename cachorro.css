@@ -251,6 +251,12 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .racao-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
   
   @media (max-width: 1200px) {
     .container {
@@ -272,7 +278,19 @@
   .racao:hover {
     transform: translateY(-5px);
   }
+  @media screen and (max-width: 768px){
+    .racao-container{
+      width: 100%;
+      flex-direction: column;
+    }
+
+  }
+    
   
+  .racao:hover {
+    transform: translateY(-5px);
+  }
+
   .racao img {
     width: 100%;
     height: 220px;
@@ -314,4 +332,5 @@
     background-color: #218838;
   }
   
+
   
