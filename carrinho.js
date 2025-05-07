@@ -109,7 +109,7 @@ function atualizarQuantidade(index, delta) {
   atualizarCarrinho();
   atualizarContadorCarrinho();
 }
-// Abrir e fechar o modal
+
 document.getElementById("openCartBtn").addEventListener("click", () => {
   document.getElementById("cartModal").classList.add("show");
 });

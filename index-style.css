@@ -64,7 +64,7 @@ header {
     cursor: pointer;
 }
 
-.hover-menu {
+/*.hover-menu {
     position: absolute;
     top: 120%;
     right: 0;
@@ -76,7 +76,29 @@ header {
     min-width: 200px;
     text-align: center;
     z-index: 999;
+}   */
+
+.hover-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 150px;
+    z-index: 1000;
+  }
+
+@media(max-width:768px){
+    .hover-menu{left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    max-width: 90vw;
+
 }
+}
+
 
 .icon-container:hover .hover-menu {
     display: block;
@@ -616,7 +638,7 @@ main {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
+ 
 .product button:hover {
     background-color: #218838;
 }
