@@ -174,6 +174,8 @@ async function checkout() {
   }
   console.log("Itens enviados ao backend:", items);
   
+  
+
   }
   window.onload = () => {
   atualizarCarrinho();
