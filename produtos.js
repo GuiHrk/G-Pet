@@ -42,7 +42,7 @@ const produtos = [
     {id: 38, nome :"Golden Castrado Frango 10 kg", preco:170.00 ,foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCsqu09NS3qEz85Z8iS3Oir" },
     {id: 39, nome :"Golden Castrado Carne 10 kg", preco:170.00 , price_id:"price_1RCss309NS3qEz85WyS0ZceQ" },
     {id: 40, nome :"Golden Castrado Salmão 10 kg", preco:170.00 ,foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCstk09NS3qEz852l8IGgoI" },
-    {id: 41, nome :"Magnus Frango Recheio 1 kg", preco: 225.00, foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCswE09NS3qEz85b6DNabhz" },
+    {id: 41, nome :"Magnus Frango Recheio 10 kg", preco: 225.00, foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCswE09NS3qEz85b6DNabhz" },
     {id: 42, nome :"Luck Cat Castrado 10kg", preco:95.00, foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png",price_id:"price_1RCsxT09NS3qEz85w8X6LAfh" },
     {id: 43, nome :"Tuessedan 100ML", preco:40.00 ,foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCsyI09NS3qEz85JClAXVL3" },
     {id: 44, nome :"Talfon 100GR", preco:9.00 ,foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCsyh09NS3qEz8542izSe08" },
@@ -67,7 +67,7 @@ const produtos = [
     {id: 62, nome :"Trinca De Ferro 500g", preco: 11.00 ,foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCtK509NS3qEz85GlTesBGn" },
     {id: 63, nome :"Curió e Bicudo 500g", preco:20.99 ,foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCtLi09NS3qEz85mNM5nKjR" },
     {id: 64, nome :"Canário da Terra 500g", preco: 9.00 ,foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCtN409NS3qEz85eGpRvLY3" },
-    {id: 65, nome :"Calopsita com Frutas 500g", preco:9.00 ,foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCtNe09NS3qEz85Puu0wNFD" },
+    {id: 65, nome :"Calopsita com Frutas 500g", preco:15.50 ,foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCtNe09NS3qEz85Puu0wNFD" },
     {id: 66, nome :"Calopstia com Mel", preco:9.00 ,foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCtOj09NS3qEz859jiT4Vb6" },
     {id: 67, nome :"Tico Ticão", preco: 10.00 ,foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCtPj09NS3qEz851hhkwd5l" },
     {id: 68, nome :"Azulão 500g", preco: 10.00,foto: "imgs/racao-gato.png",foto: "imgs/racao-gato.png", price_id:"price_1RCtR409NS3qEz85nxoBtnYL" },
@@ -141,6 +141,11 @@ const produtos = [
     {id: 115, nome :"Elefante (Pelúcia)", preco: 20.00 ,
         foto: "imgs/racao-gato.png", price_id:"price_1RCu3m09NS3qEz85XxUU0Cgp" },
     {id:116,nome:"Premier Formula Frango 15kg",preco:250.00,foto:"imgs/racao-gato.png",price_id:"price_1RL4qZ09NS3qEz85kjWoOhwz"},
-    {id:117,nome:"Golden Formula Carne 3kg",preco:25.00,foto:"imgs/racao-gato.png",price_id:"price_1RL4rh09NS3qEz85S0INKfYw"}
+    {id:117,nome:"Golden Formula Carne 3kg",preco:25.00,foto:"imgs/racao-gato.png",price_id:"price_1RL4rh09NS3qEz85S0INKfYw"},
+    {id:118,nome:"Golden Formula Carne e Arroz 1kg",preco:25.00,foto:"imgs/racao-gato.png",price_id:"price_1RMfkp09NS3qEz85vSNfmX4n"},
+    {id:119,nome:"Golden Formula Carne e Arroz 15kg",preco:165.00,foto:"imgs/racao-gato.png",price_id:"price_1RMfoY09NS3qEz85e5aHCi8P"},
+    {id:120,nome:"Golden Formula Frango e Arroz 15kg",preco:165.00,foto:"imgs/racao-gato.png",price_id:"price_1RMfr709NS3qEz85qdVSvW99"}
+
+
 
  ];
