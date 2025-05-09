@@ -10,61 +10,63 @@ body {
   color: #333;
   line-height: 1.6;
 }
- header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .logo-home img {
-    max-height: 120px;
-    width: auto;
+  max-height: 120px;
+  width: auto;
 }
 
 .search-box {
-    flex: 1;
-    margin: 0 20px;
+  flex: 1;
+  margin: 0 20px;
 }
 
 .search-box input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.search-box input:focus{
-    outline: none;
-    border-color: #004000;
-    box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.2);
+.search-box input:focus {
+  outline: none;
+  border-color: #004000;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.2);
 }
 
 .nav-itens {
-    display: flex;
-    gap: 45px;
-    position: relative;
+  display: flex;
+  gap: 45px;
+  position: relative;
 }
 
 .nav-itens img {
-    max-height: 30px;
-    width: auto;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+  max-height: 30px;
+  width: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .nav-itens img:hover {
-    transform: scale(1.6);
+  transform: scale(1.6);
 }
 
 .hover-menu {
@@ -101,55 +103,12 @@ body {
 .btn-carrinho:hover {
   background-color: #218838;
 }
-.racao-container{
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
+
+main {
+  padding: 20px;
 }
 
-@media ( max-width: 768px) {
-  .navbar{
-      gap:15px;
-      padding:10px;
-  }
-.logo-home img { 
-  max-height:80px ;
-}
-.nav-itens{
-  gap:20px;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.nav-itens img {
-  max-height: 25px;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-itens {
-      gap: 15px;
-  }
-
-  .logo-home img {
-      max-height: 60px;
-  }
-}
-@media screen and (max-width: 768px){
-  .racao-container{
-    width: 100%;
-    flex-direction: column;
-  }
-
-}
-
-main{
-    padding: 20px
-}
-
-main{
-  padding: 20px
-}
+/* Carrinho */
 .carrinho-sidebar {
   position: fixed;
   top: 0;
@@ -221,6 +180,8 @@ main{
   background-color: #7ED957;
   color: white;
 }
+
+/* Toast */
 .toast {
   visibility: hidden;
   min-width: 250px;
@@ -243,6 +204,8 @@ main{
   opacity: 1;
   bottom: 50px;
 }
+
+/* Rações - GRID FLEXÍVEL */
 .racoes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -263,23 +226,6 @@ main{
   justify-content: space-between;
 }
 
-@media (max-width: 1200px) {
-  .container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 800px) {
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-}
 .racao:hover {
   transform: translateY(-5px);
 }
@@ -297,7 +243,7 @@ main{
   margin-bottom: 8px;
 }
 
-.preco{
+.preco {
   font-size: 20px;
   font-weight: bold;
   color: #28a745;
@@ -325,3 +271,55 @@ main{
   background-color: #218838;
 }
 
+/* MEDIA QUERIES RESPONSIVAS */
+@media (max-width: 1200px) {
+  .racoes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .racoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .logo-home img {
+    max-height: 80px;
+  }
+
+  .nav-itens {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .nav-itens img {
+    max-height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .racoes {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-home img {
+    max-height: 60px;
+  }
+
+  .nav-itens {
+    gap: 15px;
+  }
+}

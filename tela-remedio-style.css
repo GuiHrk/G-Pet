@@ -79,11 +79,14 @@ main {
   gap: 20px;
   width: 100%;
 }
-.remedio-container{
+
+.remedio-container {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
+
 .remedio {
   background-color: #fff;
   border-radius: 12px;
@@ -135,9 +138,42 @@ main {
 .remedio button:hover {
   background-color: #218838;
 }
-@media screen and (max-width: 768px){
-  .remedio-container{
-    width: 100%;
+
+/* RESPONSIVO PARA MOBILE */
+@media screen and (max-width: 768px) {
+  .navbar {
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .logo-home img {
+    max-height: 70px;
+  }
+
+  .search-box {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .nav-itens {
+    width: 100%;
+    justify-content: space-around;
+    padding: 0 10px;
+  }
+
+  .nav-itens img {
+    max-height: 28px;
+
+  }
+}
+@media screen and (max-width: 768px) {
+  .remedios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px;
+    width: 100%;
+    padding: 0 10px;
   }
 }

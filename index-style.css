@@ -916,3 +916,59 @@ margin: 10px 0;
     transition: background-color 0.3s ease;
     margin-bottom: 8px;
 }
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      padding: 10px;
+    }
+  
+    .logo-home img {
+      max-height: 80px;
+    }
+  
+    .search-box {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .nav-itens {
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  
+    .nav-itens img {
+      max-height: 25px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .index {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 16px;
+      width: 100%;
+      padding: 0 10px;
+    }
+ .dropdown-container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .imagem-gato {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 9999;
+  }
+  }  
