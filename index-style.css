@@ -891,6 +891,7 @@ margin: 10px 0;
     border-color: transparent transparent white transparent;
 }
 
+
 #username {
     font-weight: bold;
     color: #1b6dc0;
@@ -963,12 +964,42 @@ margin: 10px 0;
   }
   
   .dropdown-menu {
-    position: absolute;
-    top: 100px;
     left: 0;
-    background: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 9999;
+    right: auto;
+    transform: none;
+    margin-left: 10px; /* empurra o menu para dentro */
   }
-  }  
+}
+@media (max-width: 768px) {
+    .icon-container {
+      position: relative;
+    }
+  
+    .hover-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: auto;
+      transform: none;
+      min-width: 160px;
+      z-index: 999;
+      margin-left: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      
+      /* Centralizar textos */
+      text-align: center;
+    }
+  
+    .hover-menu.right {
+      left: 0 !important;
+      right: auto !important;
+    }
+  
+    .hover-menu a,
+    .hover-menu button {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
