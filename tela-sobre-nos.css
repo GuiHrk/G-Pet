@@ -56,18 +56,20 @@ header {
 }
 
 .nav-itens {
-    display: flex;
-    gap: 45px;
+  display: flex;
+  gap: 45px;
+  position: relative;
 }
 
 .nav-itens img {
-    max-height: 30px;
-    width: auto;
-    transition: transform 0.3s ease;
+  max-height: 30px;
+  width: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .nav-itens img:hover {
-    transform: scale(1.6);
+  transform: scale(1.6);
 }
   
   /* Quem Somos - Estilo */

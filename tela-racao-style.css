@@ -10,63 +10,61 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
-header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px 20px;
+ header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo-home img {
-  max-height: 120px;
-  width: auto;
+    max-height: 120px;
+    width: auto;
 }
 
 .search-box {
-  flex: 1;
-  margin: 0 20px;
+    flex: 1;
+    margin: 0 20px;
 }
 
 .search-box input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.search-box input:focus {
-  outline: none;
-  border-color: #004000;
-  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.2);
+.search-box input:focus{
+    outline: none;
+    border-color: #004000;
+    box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.2);
 }
 
 .nav-itens {
-  display: flex;
-  gap: 45px;
-  position: relative;
+    display: flex;
+    gap: 45px;
+    position: relative;
 }
 
 .nav-itens img {
-  max-height: 30px;
-  width: auto;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+    max-height: 30px;
+    width: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .nav-itens img:hover {
-  transform: scale(1.6);
+    transform: scale(1.6);
 }
 
 .hover-menu {
@@ -104,11 +102,43 @@ header {
   background-color: #218838;
 }
 
-main {
-  padding: 20px;
+@media ( max-width: 768px) {
+  .navbar{
+      gap:15px;
+      padding:10px;
+  }
+.logo-home img { 
+  max-height:80px ;
+}
+.nav-itens{
+  gap:20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-/* Carrinho */
+.nav-itens img {
+  max-height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-itens {
+      gap: 15px;
+  }
+
+  .logo-home img {
+      max-height: 60px;
+  }
+}
+
+
+main{
+    padding: 20px
+}
+
+main{
+  padding: 20px
+}
 .carrinho-sidebar {
   position: fixed;
   top: 0;
@@ -180,8 +210,6 @@ main {
   background-color: #7ED957;
   color: white;
 }
-
-/* Toast */
 .toast {
   visibility: hidden;
   min-width: 250px;
@@ -205,7 +233,257 @@ main {
   bottom: 50px;
 }
 
-/* Rações - GRID FLEXÍVEL */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Botão do carrinho */
+#openCartBtn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Modal do carrinho */
+.cart-modal {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Inicialmente fora da tela */
+  width: 400px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+/* Quando o modal deve aparecer */
+.cart-modal.show {
+  right: 0;
+}
+
+/* Cabeçalho do modal */
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.cart-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.cart-header button {
+  background: #eee;
+  border: none;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cart-header button:hover {
+  background: #d32f2f;
+  color: #fff;
+}
+
+/* Conteúdo do carrinho */
+.cart-content {
+  flex: 1;
+  overflow-y: auto;
+  margin: 20px 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cart-item img {
+  width: 100px; 
+  height: 100px; 
+  object-fit: contain; 
+  max-width: 100%; 
+  max-height: 100%; 
+}
+
+.item-info {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 5px 10px;
+  width: fit-content;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.quantity-controls button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.quantity-controls span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Rodapé do carrinho */
+.cart-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.cart-subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.cart-footer .go-to-bag {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.cart-footer .back-btn {
+  background-color: #a5d6a7;
+  color: #1b5e20;
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.delete-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-container {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  display: none;
+}
+.cart-count.visible {
+  visibility: visible; /* Mostra o contador quando houver produtos no carrinho */
+  opacity: 1; /* Aparece suavemente */
+  transform: scale(1.2); /* Aumenta o contador um pouco quando aparece */
+}
+
+.cart-count.animate {
+  animation: pulse 0.6s ease-in-out infinite;
+}
+
+/* Animação de "pulse" para chamar atenção */
+@keyframes pulse {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.cart-footer button + button {
+  margin-top: 10px;
+}
+
+
+#emptyCartMessage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+      padding: 30px 20px;
+      height: 100%;
+}
+.empty-cart-message img {
+  max-width: 150px;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.empty-cart-message p:first-child {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.empty-cart-message p:last-child {
+  font-size: 14px;
+  color: #555;
+}
+
 .racoes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -226,6 +504,23 @@ main {
   justify-content: space-between;
 }
 
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
 .racao:hover {
   transform: translateY(-5px);
 }
@@ -243,7 +538,7 @@ main {
   margin-bottom: 8px;
 }
 
-.preco {
+.preco{
   font-size: 20px;
   font-weight: bold;
   color: #28a745;
@@ -269,57 +564,4 @@ main {
 
 .racao button:hover {
   background-color: #218838;
-}
-
-/* MEDIA QUERIES RESPONSIVAS */
-@media (max-width: 1200px) {
-  .racoes {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 800px) {
-  .racoes {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 10px;
-  }
-
-  .search-box {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .logo-home img {
-    max-height: 80px;
-  }
-
-  .nav-itens {
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .nav-itens img {
-    max-height: 25px;
-  }
-}
-
-@media (max-width: 480px) {
-  .racoes {
-    grid-template-columns: 1fr;
-  }
-
-  .logo-home img {
-    max-height: 60px;
-  }
-
-  .nav-itens {
-    gap: 15px;
-  }
 }

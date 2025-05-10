@@ -64,6 +64,10 @@ header {
     cursor: pointer;
 }
 
+.nav-itens img:hover {
+    transform: scale(1.6);
+}
+
 /*.hover-menu {
     position: absolute;
     top: 120%;

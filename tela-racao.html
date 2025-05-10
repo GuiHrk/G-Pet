@@ -33,17 +33,39 @@
            </div>
   
            <div class="icon-container"> 
-            <a href=""><img src="imgs/carrinho.png" alt="Carrinho"></a>
-              </div>
-              <div class="icon-container">
-                <a href=""><img src="imgs/favorito.png" alt="Favoritos"></a>
-              </div> 
+            <a href="javascript:void(0);" id="openCartBtn"><img src="imgs/carrinho.png" alt="Carrinho"></a>
+            <span id="cartCount" class="cart-count" style="display: none;">0</span>
+          </div>
 
             <div class="icon-container"> 
                 <a href=""><img src="imgs/contato.png" alt="Contatos"></a>
             </div> 
         </div> 
 </header>
+
+<div id="cartModal" class="cart-modal">
+    <div class="cart-header">
+    <h2>Confira sua compra</h2>
+    <button id="closeCartBtn">&times;</button>
+    </div>
+    <div class="cart-content" id="cartItems">
+    <!-- Itens do carrinho serão exibidos aqui -->
+    </div>
+    <div id="emptyCartMessage" style="display: none; text-align: center; padding: 20px;">
+    <img src="imgs/carrinho.png" alt="Carrinho vazio" style="max-width: 150px; margin-bottom: 10px;">
+    <p style="font-size: 18px;">Seu carrinho está vazio!</p>
+    <p style="font-size: 14px; color: #555;">Explore nossos produtos e adicione seus favoritos aqui.</p>
+    </div>
+    
+    <div class="cart-footer">
+    <div class="cart-subtotal">
+        <span>Subtotal:</span>
+        <strong id="cartTotal">R$ 0,00</strong>
+    </div>
+    <button class="go-to-bag" onclick="checkout()">Ir para sacola</button>
+    <button class="back-btn" onclick="closeCart()">Continuar comprando</button>
+    </div>
+</div>
     
     <main>
         <div class="racoes" id="listaRacoes">

@@ -57,8 +57,6 @@ header {
     display: flex;
     gap: 45px;
     position: relative;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .nav-itens img {
@@ -66,6 +64,10 @@ header {
     width: auto;
     transition: transform 0.3s ease;
     cursor: pointer;
+}
+
+.nav-itens img:hover {
+    transform: scale(1.6);
 }
 
 .background-stripes {
