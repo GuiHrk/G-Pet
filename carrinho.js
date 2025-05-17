@@ -1,4 +1,19 @@
-let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+//let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+let carrinho = [];
+
+if (localStorage.getItem('checkout_in_progress') === 'true' ) {
+
+  localStorage.removeItem('checkout_in_progress');
+  localStorage.removeItem('carrinho');
+  carrinho = [];
+  console.log("carrinho limpo após tentativa de checkout não concluida")
+} else {
+  carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+}
+
+
+carregar
 
 function adicionarAoCarrinho(nome, preco, foto, price_id) {
   if(!nome || !preco || !foto || !price_id){
@@ -134,6 +149,8 @@ function mostrarToast(mensagem) {
     toast.classList.remove("show");
   }, 3000); 
 }
+
+
 async function checkout() {
   if (carrinho.length === 0) {
     alert("Seu carrinho está vazio!");
@@ -152,13 +169,14 @@ async function checkout() {
       headers: {'Content-Type': 'application/json' },
       body: JSON.stringify({
         items: items,
-        userEmail: firebase.auth().currentUser?.email || null
+      //  userEmail: firebase.auth().currentUser?.email || null
       })
     });
   
     const data = await response.json();
     if (data.id){
       const stripe = Stripe('pk_test_51RCoZV09NS3qEz85SN2uuux4UDWO2aHKwyxcK2yID1ZDv91TRwy8zck0gDWIN2ZNUlrMOJlPbGgHBuz25jFtcsch00X6ojyX6w');
+      localStorage.setItem('checkout_in_progress', 'true');
       await stripe.redirectToCheckout({sessionId: data.id});
       
       carrinho = [];
@@ -177,7 +195,7 @@ async function checkout() {
   
 
   }
-  window.onload = () => {
+  window.onload = () => {  
   atualizarCarrinho();
   atualizarContadorCarrinho();
   };

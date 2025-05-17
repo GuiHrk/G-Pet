@@ -34,39 +34,17 @@
            </div>
   
            <div class="icon-container"> 
-            <a href="javascript:void(0);" id="openCartBtn"><img src="imgs/carrinho.png" alt="Carrinho"></a>
-            <span id="cartCount" class="cart-count" style="display: none;">0</span>
-          </div>
-          
+                <a href=""><img src="imgs/carrinho.png" alt="Carrinho"></a>
+              </div>
+              <div class="icon-container">
+                <a href=""><img src="imgs/favorito.png" alt="Favoritos"></a>
+              </div> 
+
             <div class="icon-container"> 
                 <a href=""><img src="imgs/contato.png" alt="Contatos"></a>
             </div> 
         </div> 
 </header>
-
-<div id="cartModal" class="cart-modal">
-    <div class="cart-header">
-    <h2>Confira sua compra</h2>
-    <button id="closeCartBtn">&times;</button>
-    </div>
-    <div class="cart-content" id="cartItems">
-    <!-- Itens do carrinho serão exibidos aqui -->
-    </div>
-    <div id="emptyCartMessage" style="display: none; text-align: center; padding: 20px;">
-    <img src="imgs/carrinho.png" alt="Carrinho vazio" style="max-width: 150px; margin-bottom: 10px;">
-    <p style="font-size: 18px;">Seu carrinho está vazio!</p>
-    <p style="font-size: 14px; color: #555;">Explore nossos produtos e adicione seus favoritos aqui.</p>
-    </div>
-    
-    <div class="cart-footer">
-    <div class="cart-subtotal">
-        <span>Subtotal:</span>
-        <strong id="cartTotal">R$ 0,00</strong>
-    </div>
-    <button class="go-to-bag" onclick="checkout()">Ir para sacola</button>
-    <button class="back-btn" onclick="closeCart()">Continuar comprando</button>
-    </div>
-</div>
 
     <main>
         <div class="remedios" id="listaRemedios">
@@ -132,7 +110,31 @@
         </div>
     </main>
     
-    <script src="carrinho.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+         const firebaseConfig = {
+        apiKey: "AIzaSyDLBaNGN0s7MLAcx2XjHmSc1nCgweSaPkI",
+        authDomain: "gpet-cadastros.firebaseapp.com",
+        projectId: "gpet-cadastros",
+        storageBucket: "gpet-cadastros.firebasestorage.app",
+        messagingSenderId: "734450995075",
+        appId: "1:734450995075:web:9cd0905266c0f5143bb0b6",
+        measurementId: "G-L089HL3TPL"
+    };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
     <script src="busca-remedio.js"></script>
+    <script src="carrinho.js?v1.2"></script>
+    <script src="produtos.js?v1.2"></script>
+
+    <div id="alertToast" class="toast">Produto adicionado ao carrinho!</div>
 </body>
 </html>

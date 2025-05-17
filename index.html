@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index-style.css">
+  <link rel="stylesheet" href="index-style.css?v1.2">
   <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="imgs/Gpet-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="imgs/Gpet-16x16.png">
@@ -145,7 +145,7 @@
             <h3>Golden Special Frango e Carne 15Kg</h3>
             <p class="descricao">Ração rica em proteínas</p>
             <p class="preco">R$ 149,00</p>
-            <button class="buy-btn" onclick="adicionarAoCarrinho('Golden Special 15kg', 149.00, 'imgs/racao-gato.png', 'price_1RCoe609NS3qEz85fzSodjU6')">Adicionar Ao Carrinho</button>
+            <button class="buy-btn" onclick="adicionarAoCarrinho('Golden Special 15kg', 149.00, 'imgs/racao-golden-special-para-caes-adultos-frango-e-carne-3310549-15kg-Frente (1).png', 'price_1RCoe609NS3qEz85fzSodjU6')">Adicionar Ao Carrinho</button>
                   
         </div>
 
@@ -153,7 +153,7 @@
             <h3>Golden Formula Frango 15kg</h3>
             <p class="descricao">Ração rica em proteínas</p>
             <p class="preco">R$ 165,00</p>
-            <button class="buy-btn" onclick="adicionarAoCarrinho('Golden Formula Frango 15kg', 165.00, 'imgs/racao-gato.png', 'price_1RCqap09NS3qEz85iNsQUhxW')">Adicionar Ao Carrinho</button>
+            <button class="buy-btn" onclick="adicionarAoCarrinho('Golden Formula Frango 15kg', 165.00, '12 racoes/Golden Formula Frango 15kg.png', 'price_1RCqap09NS3qEz85iNsQUhxW')">Adicionar Ao Carrinho</button>
            
            
 
@@ -242,10 +242,10 @@
         firebase.initializeApp(firebaseConfig);
     </script>
 
-      <script src="carrinho.js"></script>
-      <script src="produtos.js"></script>
-      <script src="cadastro_login.js"></script>
-      <script src="busca-index.js"></script>
+      <script src="carrinho.js?v1.2"></script>
+      <script src="produtos.js?v1.2"></script>
+      <script src="cadastro_login.js?v1.2"></script>
+      <script src="busca-index.js?v1.2"></script>
   
     <script> firebase.auth().onAuthStateChanged(function(user){
        const userInfoDiv = document.getElementById('user-info');
@@ -268,7 +268,7 @@
 
     </script>
 
-  
+<div id="alertToast" class="toast">Produto adicionado ao carrinho!</div>
 
   </body>
   </html>
