@@ -12,9 +12,6 @@ if (localStorage.getItem('checkout_in_progress') === 'true' ) {
   carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 }
 
-
-carregar
-
 function adicionarAoCarrinho(nome, preco, foto, price_id) {
   if(!nome || !preco || !foto || !price_id){
     console.error("Dados inválidos ao adicionar ao carrinho:", nome, preco,foto,price_id );
@@ -164,7 +161,7 @@ async function checkout() {
 
 
   try {
-    const response = await fetch('https://g-pet.onrender.com/create-checkout-session',{
+    const response = await fetch(`https://g-pet.onrender.com/create-checkout-session`,{
       method: 'POST',
       headers: {'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -178,11 +175,7 @@ async function checkout() {
       const stripe = Stripe('pk_test_51RCoZV09NS3qEz85SN2uuux4UDWO2aHKwyxcK2yID1ZDv91TRwy8zck0gDWIN2ZNUlrMOJlPbGgHBuz25jFtcsch00X6ojyX6w');
       localStorage.setItem('checkout_in_progress', 'true');
       await stripe.redirectToCheckout({sessionId: data.id});
-      
-      carrinho = [];
-  localStorage.removeItem('carrinho');
-  atualizarCarrinho();
-  atualizarContadorCarrinho();
+    
     } else {
       alert("Erro ao iniciar o pagamento");
     }
@@ -191,12 +184,10 @@ async function checkout() {
     alert("Erro ao Processar o Pagamento");
   }
   console.log("Itens enviados ao backend:", items);
-  
-  
-
   }
-  window.onload = () => {  
+  
+  window.addEventListener('load', () => {  
   atualizarCarrinho();
   atualizarContadorCarrinho();
-  };
+  });
  

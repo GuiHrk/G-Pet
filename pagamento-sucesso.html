@@ -16,6 +16,42 @@
     <h1>Pagamento Realizado!</h1>
     <p>Seu pagamento foi processado com sucesso.</p>
     <a href="index.html" class="btn">Voltar à Página Inicial</a>
+  
   </div>
+
+
+  <script> 
+
+    window.onload = async () => {
+      const params = new URLSearchParams(window.location.search);
+      const sessionId = params.get("session_id");
+
+      if(sessionId){
+
+        const response = await fetch(`https://g-pet.onrender.com/checkout-session/${sessionId}`)
+        const session = await response.json();
+
+        if(session && session.payment_status === "paid"){
+          localStorage.removeItem('carrinho');
+        }else{
+          console.warn("sessão encontrada, mas pagamento não confirmado");
+        }
+
+      }
+    }
+
+
+  </script>
+
+
+
+
+
+
+
+
+  <script src="carrinho.js"></script>
+  <script src="produtos.js"></script>
+
 </body>
 </html>
